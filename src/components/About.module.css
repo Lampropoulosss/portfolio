@@ -1,0 +1,101 @@
+.about {
+    padding: 6rem 2rem;
+    background: var(--background);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.textSection h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.textSection p {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.assetsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.assetsList li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--foreground);
+}
+
+.assetsList li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.eduItem {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--card-bg);
+}
+
+.eduItem h4 {
+    color: var(--foreground);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.eduItem span {
+    color: var(--accent);
+    font-size: 0.9rem;
+    display: block;
+}
+
+.eduItem p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

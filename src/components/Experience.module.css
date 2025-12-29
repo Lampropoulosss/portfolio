@@ -1,0 +1,90 @@
+.experience {
+    padding: 6rem 2rem;
+    background: var(--card-bg);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--foreground);
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--secondary);
+    opacity: 0.3;
+}
+
+.item {
+    position: relative;
+    margin-bottom: 4rem;
+    padding-left: 3rem;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+/* Dot */
+.item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    /* (12px width / 2) - (2px line width / 2) roughly centered */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.role {
+    font-size: 1.4rem;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.company {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.period {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin-left: 1rem;
+    font-style: italic;
+}
+
+.description {
+    margin-top: 1rem;
+    color: var(--secondary);
+    line-height: 1.6;
+}
+
+.description ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
