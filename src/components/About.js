@@ -10,19 +10,20 @@ export default function About() {
                     <div className={styles.textSection}>
                         <h3>Profile</h3>
                         <p>
-                            I am a student at the Department of Information and Electronic Systems Engineering of the International Hellenic University.
-                            I have an excellent knowledge of Greek and English (B2). I constantly follow the latest developments in technology and IT.
+                            I am a passionate Software Engineer currently advancing my expertise in Information and Electronic Systems Engineering at the International Hellenic University.
+                            With a coding background that began at age 16, I combine academic rigor with a hands-on approach to modern web development.
                         </p>
                         <p>
-                            I have been involved in programming since the age of 16 and I am eager to gain new knowledge and respond quickly to demands with respect.
+                            I am driven by a curiosity to learn and a commitment to quality. I stay ahead of the curve by continuously adapting to the latest tech trends
+                            and thrive in environments that challenge me to solve complex problems. Fluent in Greek and English.
                         </p>
 
-                        <h3>Key Assets & Interests</h3>
+                        <h3>Core Competencies & Interests</h3>
                         <ul className={styles.assetsList}>
-                            <li>Eager to learn</li>
-                            <li>Teamwork</li>
-                            <li>Professionalism</li>
-                            <li>Politeness</li>
+                            <li>Continuous Learner</li>
+                            <li>Collaborative Spirit</li>
+                            <li>Problem Solving</li>
+                            <li>Professional Communication</li>
                             <li>Music & Piano</li>
                         </ul>
                     </div>
@@ -33,18 +34,18 @@ export default function About() {
                         <div className={styles.eduItem}>
                             <h4>Information and Electronic Systems Engineering</h4>
                             <span>International Hellenic University (2023 - Present)</span>
-                            <p>Student</p>
+                            <p>Pursuing Degree</p>
                         </div>
 
                         <div className={styles.eduItem}>
                             <h4>3rd General High School of Kalamaria</h4>
                             <span>2020 - 2023</span>
-                            <p>Graduated with "EXCELLENT" 18.4</p>
+                            <p>Graduated with Distinction</p>
                         </div>
 
                         <h3>Personal Details</h3>
                         <p style={{ marginBottom: 0 }}><strong>Location:</strong> Thessaloniki, Greece</p>
-                        <p style={{ marginBottom: 0 }}><strong>DOB:</strong> 05/01/2005</p>
+                        <p style={{ marginBottom: 0 }}><strong>Availability:</strong> Open to work / Freelance</p>
                     </div>
                 </div>
             </div>

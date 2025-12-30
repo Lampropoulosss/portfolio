@@ -13,7 +13,7 @@ export default function Hero() {
                     </h1>
                     <h2 className={styles.title}>Software Engineer</h2>
                     <p className={styles.description}>
-                        I am a student of Information and Electronic Systems Engineering with a passion for web development and technology.
+                        Transforming ideas into polished software. A Software Engineer dedicated to building accessible, high-performance web applications.
                         Based in Thessaloniki, Greece.
                     </p>
                     <div className={styles.ctaButtons}>

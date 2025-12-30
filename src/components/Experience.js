@@ -7,6 +7,7 @@ export default function Experience() {
                 <h2 className={styles.sectionTitle}>Work Experience</h2>
 
                 <div className={styles.timeline}>
+                    {/* Current Role */}
                     <div className={styles.item}>
                         <h3 className={styles.role}>
                             Full-Stack Web Developer <span className={styles.company}>@ Celani Software House</span>
@@ -14,13 +15,14 @@ export default function Experience() {
                         </h3>
                         <div className={styles.description}>
                             <ul>
-                                <li>Developed web applications using .NET (Web API, Razor Pages), React, and Next.js.</li>
-                                <li>Managed DevOps workflows on Debian VPS using Docker, Docker Compose, and Azure.</li>
-                                <li>Implemented automated testing procedures using Python.</li>
+                                <li>Architecting and building scalable web solutions using .NET (Web API), Razor Pages, React, and Next.js.</li>
+                                <li>Orchestrating DevOps workflows and deployments on Debian VPS using Docker, Docker Compose, and Azure.</li>
+                                <li>Engineering automated testing suites using Python to ensure code reliability and performance.</li>
                             </ul>
                         </div>
                     </div>
 
+                    {/* Robinrich */}
                     <div className={styles.item}>
                         <h3 className={styles.role}>
                             Full-Stack Web Developer & Maintainer <span className={styles.company}>@ robinrich.gr</span>
@@ -28,36 +30,38 @@ export default function Experience() {
                         </h3>
                         <div className={styles.description}>
                             <ul>
-                                <li>Add new features based on owner needs.</li>
-                                <li>Correcting issues and maintenance.</li>
+                                <li>Expanded platform functionality by developing new features tailored to business requirements.</li>
+                                <li>Optimized application performance and resolved critical legacy issues to ensure system stability.</li>
                             </ul>
                         </div>
                     </div>
 
+                    {/* Personal Venture */}
                     <div className={styles.item}>
                         <h3 className={styles.role}>
-                            Owner & Full-Stack Web Developer <span className={styles.company}>@ yt2mp3.tech</span>
+                            Founder & Lead Developer <span className={styles.company}>@ yt2mp3.tech</span>
                             <span className={styles.period}>Nov 2021 - June 2022</span>
                         </h3>
                         <div className={styles.description}>
                             <ul>
-                                <li>Designed and managed yt2mp3.tech.</li>
-                                <li>Implemented Front-End and Back-End using Next.JS Framework.</li>
-                                <li>Promoted the website and ensured specification compliance.</li>
+                                <li>Founded and developed a full-stack media conversion platform using the Next.js framework.</li>
+                                <li>Owned the entire product lifecycle, from UI/UX design to backend architecture and deployment.</li>
+                                <li>Executed SEO strategies and performance optimizations to drive user traffic.</li>
                             </ul>
                         </div>
                     </div>
 
+                    {/* Early Experience */}
                     <div className={styles.item}>
                         <h3 className={styles.role}>
-                            Volunteer Front-End Developer <span className={styles.company}>@ Chaotic Destiny Hosting</span>
+                            Front-End Developer (Volunteer) <span className={styles.company}>@ Chaotic Destiny Hosting</span>
                             <span className={styles.period}>May 2021 - Aug 2021</span>
                         </h3>
                         <div className={styles.description}>
                             <ul>
-                                <li>Solved customer problems and answered questions as Support Agent.</li>
-                                <li>Involved in design and implementation using HTML, CSS, and Javascript.</li>
-                                <li>Implemented Managers' ideas and debugged code.</li>
+                                <li>Collaborated with the core team to design and implement responsive UI components using HTML, CSS, and JavaScript.</li>
+                                <li>Provided technical support and troubleshooting for hosting clients.</li>
+                                <li>Debugged front-end issues and optimized code based on feedback from senior management.</li>
                             </ul>
                         </div>
                     </div>

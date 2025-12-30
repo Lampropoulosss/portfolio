@@ -4,9 +4,10 @@ import Link from 'next/link';
 export default function Navbar() {
     return (
         <nav className={styles.navbar}>
-            <Link href="/" className={styles.logo}>
+            <Link href="/" className={styles.logo} scroll={false}>
                 Ioannis Lampropoulos
             </Link>
+
             <ul className={styles.navLinks}>
                 <li><a href="#about" className={styles.navLink}>About</a></li>
                 <li><a href="#experience" className={styles.navLink}>Experience</a></li>

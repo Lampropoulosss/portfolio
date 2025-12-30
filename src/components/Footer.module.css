@@ -40,9 +40,25 @@
     opacity: 1;
 }
 
+.scrollBtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--secondary);
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.scrollBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
 @media (max-width: 600px) {
     .container {
-        flex-direction: column;
-        text-align: center;
+        gap: 1.5rem;
     }
 }
