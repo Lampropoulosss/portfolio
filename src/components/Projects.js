@@ -14,7 +14,7 @@ const projects = [
         description: "Advanced media tool leveraging client-side processing for conversion to minimize server load. Powered by a Next.js backend, integrated with a high-throughput Golang API for real-time streaming.",
         tags: ["Next.js", "Golang (Stream API)", "Client-Side Processing"],
         image: "/images/project_mp3convert.png",
-        link: "https://mp3convert.tech"
+        link: "https://github.com/Lampropoulosss/mp3convert.tech"
     },
     {
         title: "yt2mp3.tech",
