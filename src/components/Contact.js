@@ -6,17 +6,39 @@ import { useState } from 'react';
 export default function Contact() {
     const [status, setStatus] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
 
-        // Simulate form submission
-        setTimeout(() => {
-            setStatus('sent');
-            // Optional: Reset form fields here if you want
-            e.target.reset();
-            // Removed the alert() for a smoother UX
-        }, 1500);
+        const formData = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.message.value,
+        };
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('sent');
+                setTimeout(() => {
+                    setStatus('');
+                    e.target.reset();
+                }, 3000); // Clear success message after 3 seconds
+            } else {
+                setStatus('error');
+                console.error('Submission failed');
+            }
+        } catch (error) {
+            setStatus('error');
+            console.error('An error occurred', error);
+        }
     };
 
     return (
@@ -38,8 +60,8 @@ export default function Contact() {
 
                     <div className={styles.infoItem}>
                         <span className={styles.label}>Email</span>
-                        <a href="mailto:me@ioannislampropoulos.com" className={`${styles.value} ${styles.link}`}>
-                            me@ioannislampropoulos.com
+                        <a href="mailto:contact@ioannislampropoulos.com" className={`${styles.value} ${styles.link}`}>
+                            contact@ioannislampropoulos.com
                         </a>
                     </div>
 
@@ -77,6 +99,11 @@ export default function Contact() {
                     {status === 'sent' && (
                         <p style={{ color: '#4caf50', marginTop: '1rem', fontSize: '0.9rem' }}>
                             Thank you! Your message has been received.
+                        </p>
+                    )}
+                    {status === 'error' && (
+                        <p style={{ color: '#f44336', marginTop: '1rem', fontSize: '0.9rem' }}>
+                            Something went wrong. Please try again later.
                         </p>
                     )}
                 </form>

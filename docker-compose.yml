@@ -1,0 +1,11 @@
+services:
+  cv-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cv-website
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env

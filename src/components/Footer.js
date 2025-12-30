@@ -20,7 +20,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.socials}>
-                    <a href="mailto:me@ioannislampropoulos.com" className={styles.socialLink}>
+                    <a href="mailto:contact@ioannislampropoulos.com" className={styles.socialLink}>
                         Email
                     </a>
                     <a href="https://github.com/Lampropoulosss" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
