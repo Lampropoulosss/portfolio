@@ -14,7 +14,7 @@ export default function About() {
                             With a coding background that began at age 16, I combine academic rigor with a hands-on approach to modern web development.
                         </p>
                         <p>
-                            I am driven by a curiosity to learn and a commitment to quality. I stay ahead of the curve by continuously adapting to the latest tech trends
+                            I am driven by curiosity to learn and commitment to quality. I stay ahead of the curve by continuously adapting to the latest tech trends
                             and thrive in environments that challenge me to solve complex problems. Fluent in Greek and English.
                         </p>
 
