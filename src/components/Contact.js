@@ -47,10 +47,7 @@ export default function Contact() {
                     <div className={styles.infoItem}>
                         <span className={styles.label}>Socials</span>
                         <div style={{ display: 'flex', gap: '1rem' }}>
-                            <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                LinkedIn
-                            </a>
-                            <a href="https://github.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                            <a href="https://github.com/Lampropoulosss" target="_blank" rel="noopener noreferrer" className={styles.link}>
                                 GitHub
                             </a>
                         </div>

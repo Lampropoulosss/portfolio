@@ -14,6 +14,7 @@ const outfit = Outfit({
 export const metadata = {
   title: "Ioannis Lampropoulos | Portfolio",
   description: "Portfolio of Ioannis Lampropoulos, Software Engineer.",
+  metadataBase: new URL('https://ioannislampropoulos.com'),
 };
 
 export default function RootLayout({ children }) {
