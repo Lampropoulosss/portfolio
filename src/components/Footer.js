@@ -1,8 +1,10 @@
 'use client';
 
 import styles from './Footer.module.css';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+    const t = useTranslations('Footer');
     const currentYear = new Date().getFullYear();
 
     const scrollToTop = () => {
@@ -16,20 +18,20 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.copyright}>
-                    © {currentYear} Ioannis Lampropoulos. All rights reserved.
+                    {t('rights', { year: currentYear })}
                 </div>
 
                 <div className={styles.socials}>
                     <a href="mailto:contact@ioannislampropoulos.com" className={styles.socialLink}>
-                        Email
+                        {t('email')}
                     </a>
                     <a href="https://github.com/Lampropoulosss" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                        GitHub
+                        {t('github')}
                     </a>
 
                     {/* Scroll to Top Button */}
                     <button onClick={scrollToTop} className={styles.scrollBtn}>
-                        &uarr; Top
+                        &uarr; {t('top')}
                     </button>
                 </div>
             </div>

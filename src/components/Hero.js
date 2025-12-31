@@ -1,24 +1,28 @@
 import styles from './Hero.module.css';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+    const t = useTranslations('Hero');
+
     return (
         <section className={styles.hero}>
             <div className={styles.container}>
                 <div className={`fade-in ${styles.content}`}>
-                    <span className={styles.greeting}>Hi, I'm</span>
+                    <span className={styles.greeting}>{t('greeting')}</span>
                     <h1 className={styles.name}>
-                        Ioannis <br />
-                        <span>Lampropoulos</span>
+                        {t('firstName')} <br />
+                        <span>{t('lastName')}</span>
                     </h1>
-                    <h2 className={styles.title}>Software Engineer</h2>
+                    <h2 className={styles.title}>{t('title')}</h2>
                     <p className={styles.description}>
-                        Transforming ideas into polished software. A Software Engineer dedicated to building accessible, high-performance web applications.
-                        Based in Thessaloniki, Greece.
+                        {t.rich('description', {
+                            br: () => <br />
+                        })}
                     </p>
                     <div className={styles.ctaButtons}>
-                        <a href="#projects" className={styles.primaryBtn}>Check my work</a>
-                        <a href="#contact" className={styles.secondaryBtn}>Contact me</a>
+                        <a href="#projects" className={styles.primaryBtn}>{t('checkWork')}</a>
+                        <a href="#contact" className={styles.secondaryBtn}>{t('contactMe')}</a>
                     </div>
                 </div>
                 <div className={`fade-in ${styles.imageContainer}`}>
