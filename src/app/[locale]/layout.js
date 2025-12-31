@@ -1,5 +1,9 @@
+import "../globals.css";
 import { Inter, Outfit } from "next/font/google";
-import "./globals.css";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,11 +38,21 @@ export const viewport = {
   themeColor: '#38bdf8',
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
       <body>
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

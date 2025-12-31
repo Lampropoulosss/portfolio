@@ -2,8 +2,10 @@
 
 import styles from './Contact.module.css';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function Contact() {
+    const t = useTranslations('Contact');
     const [status, setStatus] = useState('');
 
     const handleSubmit = async (e) => {
@@ -45,29 +47,27 @@ export default function Contact() {
         <section id="contact" className={styles.contact}>
             <div className={styles.container}>
                 <div className={styles.info}>
-                    <h2 className={styles.sectionTitle}>Let's Connect</h2>
+                    <h2 className={styles.sectionTitle}>{t('title')}</h2>
                     <p style={{ color: 'var(--secondary)', lineHeight: 1.6, marginBottom: '2rem' }}>
-                        I am currently available for freelance projects. {/* and open to full-time opportunities. */}
-                        If you have a project that needs a robust solution, or just want to discuss modern web technologies, feel free to reach out.
+                        {t('description')}
                     </p>
 
                     <div className={styles.infoItem}>
-                        <span className={styles.label}>Phone</span>
+                        <span className={styles.label}>{t('phone')}</span>
                         <a href="tel:+306939379169" className={`${styles.value} ${styles.link}`}>
                             +30 693 937 9169
                         </a>
                     </div>
 
                     <div className={styles.infoItem}>
-                        <span className={styles.label}>Email</span>
+                        <span className={styles.label}>{t('email')}</span>
                         <a href="mailto:contact@ioannislampropoulos.com" className={`${styles.value} ${styles.link}`}>
                             contact@ioannislampropoulos.com
                         </a>
                     </div>
 
-                    {/* TIP: It is highly recommended to add Social Links here (LinkedIn/GitHub) */}
                     <div className={styles.infoItem}>
-                        <span className={styles.label}>Socials</span>
+                        <span className={styles.label}>{t('socials')}</span>
                         <div style={{ display: 'flex', gap: '1rem' }}>
                             <a href="https://github.com/Lampropoulosss" target="_blank" rel="noopener noreferrer" className={styles.link}>
                                 GitHub
@@ -78,32 +78,32 @@ export default function Contact() {
 
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
-                        <label htmlFor="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe" />
+                        <label htmlFor="name">{t('form.nameLabel')}</label>
+                        <input type="text" id="name" name="name" required placeholder={t('form.namePlaceholder')} />
                     </div>
 
                     <div className={styles.formGroup}>
-                        <label htmlFor="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com" />
+                        <label htmlFor="email">{t('form.emailLabel')}</label>
+                        <input type="email" id="email" name="email" required placeholder={t('form.emailPlaceholder')} />
                     </div>
 
                     <div className={styles.formGroup}>
-                        <label htmlFor="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        <label htmlFor="message">{t('form.messageLabel')}</label>
+                        <textarea id="message" name="message" rows="5" required placeholder={t('form.messagePlaceholder')}></textarea>
                     </div>
 
                     <button type="submit" className={styles.submitBtn} disabled={status === 'sending' || status === 'sent'}>
-                        {status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message Sent' : 'Send Message'}
+                        {status === 'sending' ? t('form.sending') : status === 'sent' ? t('form.sent') : t('form.send')}
                     </button>
 
                     {status === 'sent' && (
                         <p style={{ color: '#4caf50', marginTop: '1rem', fontSize: '0.9rem' }}>
-                            Thank you! Your message has been received.
+                            {t('form.successMessage')}
                         </p>
                     )}
                     {status === 'error' && (
                         <p style={{ color: '#f44336', marginTop: '1rem', fontSize: '0.9rem' }}>
-                            Something went wrong. Please try again later.
+                            {t('form.errorMessage')}
                         </p>
                     )}
                 </form>

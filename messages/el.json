@@ -1,0 +1,143 @@
+{
+    "Navbar": {
+        "about": "Σχετικά",
+        "experience": "Εμπειρία",
+        "projects": "Έργα",
+        "contact": "Επικοινωνία"
+    },
+    "Hero": {
+        "greeting": "Γεια, είμαι ο",
+        "firstName": "Ιωάννης",
+        "lastName": "Λαμπρόπουλος",
+        "title": "Software Engineer",
+        "description": "Μετατρέπω ιδέες σε άρτιο λογισμικό. Ένας Software Engineer αφοσιωμένος στην ανάπτυξη προσβάσιμων web εφαρμογών υψηλής απόδοσης.\nΜε έδρα τη Θεσσαλονίκη.",
+        "checkWork": "Δείτε τη δουλειά μου",
+        "contactMe": "Επικοινωνήστε μαζί μου"
+    },
+    "About": {
+        "title": "Σχετικά με εμένα",
+        "profile": "Προφίλ",
+        "profileText1": "Είμαι ένας αφοσιωμένος Software Engineer που εμβαθύνει τις γνώσεις του στο τμήμα Μηχανικών Πληροφορικής και Ηλεκτρονικών Συστημάτων στο ΔΙΠΑΕ. Με ενασχόληση στον προγραμματισμό από την ηλικία των 16, συνδυάζω την ακαδημαϊκή κατάρτιση με την πρακτική προσέγγιση στη σύγχρονη ανάπτυξη web.",
+        "profileText2": "Κίνητρό μου είναι η περιέργεια για μάθηση και η δέσμευση στην ποιότητα. Παρακολουθώ στενά τις τεχνολογικές εξελίξεις προσαρμοζόμενος συνεχώς στα νέα trends και αποδίδω καλύτερα σε περιβάλλοντα που με προκαλούν να λύσω σύνθετα προβλήματα. Μιλάω άπταιστα Ελληνικά και Αγγλικά.",
+        "competencies": "Δεξιότητες & Ενδιαφέροντα",
+        "competenciesList": {
+            "learner": "Συνεχής Μάθηση",
+            "collaborative": "Ομαδικό Πνεύμα",
+            "problemSolving": "Επίλυση Προβλημάτων",
+            "communication": "Επαγγελματική Επικοινωνία",
+            "music": "Μουσική & Πιάνο"
+        },
+        "education": "Εκπαίδευση",
+        "edu1": {
+            "title": "Τμήμα Μηχανικών Πληροφορικής και Ηλεκτρονικών Συστημάτων",
+            "school": "Διεθνές Πανεπιστήμιο της Ελλάδος (2023 - Σήμερα)",
+            "status": "Προπτυχιακός Φοιτητής"
+        },
+        "edu2": {
+            "title": "3ο Γενικό Λύκειο Καλαμαριάς",
+            "school": "2020 - 2023",
+            "status": "Αποφοίτηση με Άριστα"
+        },
+        "personal": "Προσωπικά Στοιχεία",
+        "locationLabel": "Τοποθεσία:",
+        "locationValue": "Θεσσαλονίκη, Ελλάδα",
+        "availabilityLabel": "Διαθεσιμότητα:",
+        "availabilityValue": "Διαθέσιμος για εργασία / Freelance"
+    },
+    "Experience": {
+        "title": "Επαγγελματική Εμπειρία",
+        "jobs": [
+            {
+                "role": "Full-Stack Web Developer",
+                "company": "@ Celani Software House",
+                "period": "Δεκ 2024 - Σήμερα",
+                "description": [
+                    "Αρχιτεκτονική και υλοποίηση scaleable λύσεων web χρησιμοποιώντας .NET (Web API), Razor Pages, React και Next.js.",
+                    "Οργάνωση DevOps workflows και deployments σε Debian VPS με χρήση Docker, Docker Compose και Azure.",
+                    "Ανάπτυξη αυτοματοποιημένων ελέγχων (automated testing) με Python για τη διασφάλιση της αξιοπιστίας και της απόδοσης του κώδικα."
+                ]
+            },
+            {
+                "role": "Full-Stack Web Developer & Maintainer",
+                "company": "@ robinrich.gr",
+                "period": "Οκτ 2024 - Δεκ 2024",
+                "description": [
+                    "Επέκταση λειτουργικότητας της πλατφόρμας μέσω ανάπτυξης νέων χαρακτηριστικών βάσει των επιχειρηματικών απαιτήσεων.",
+                    "Βελτιστοποίηση της απόδοσης της εφαρμογής και επίλυση κρίσιμων ζητημάτων του παλαιότερου κώδικα (legacy issues) ώστε να διασφαλιστεί η σταθερότητά του."
+                ]
+            },
+            {
+                "role": "Founder & Lead Developer",
+                "company": "@ yt2mp3.tech",
+                "period": "Νοε 2021 - Ιουν 2022",
+                "description": [
+                    "Ίδρυση και ανάπτυξη της full-stack πλατφόρμας μετατροπής πολυμέσων χρησιμοποιώντας το framework Next.js.",
+                    "Διαχείριση ολόκληρου του κύκλου ζωής του προϊόντος, από τον σχεδιασμό UI/UX έως την αρχιτεκτονική backend και το deployment.",
+                    "Εκτέλεση στρατηγικών SEO (Search Engine Optimizations) και βελτιστοποιήσεων απόδοσης για αύξηση της επισκεψιμότητας."
+                ]
+            },
+            {
+                "role": "Front-End Developer (Εθελοντής)",
+                "company": "@ Chaotic Destiny Hosting",
+                "period": "Μάι 2021 - Αυγ 2021",
+                "description": [
+                    "Συνεργασία με την υπόλοιπη ομάδα για τον σχεδιασμό και υλοποίηση responsive UI components με HTML, CSS και JavaScript.",
+                    "Παροχή τεχνικής υποστήριξης (troubleshooting) για πελάτες hosting.",
+                    "Debugging σε front-end ζητήματα και βελτιστοποίηση κώδικα κατόπιν υποδείξεων από τη διοίκηση."
+                ]
+            }
+        ]
+    },
+    "Projects": {
+        "title": "Επιλεγμένα Έργα",
+        "viewProject": "Προβολή",
+        "list": [
+            {
+                "title": "robinrich.gr",
+                "description": "Συντήρηση και προσθήκη νέων δυνατοτήτων σε ενεργή εμπορική πλατφόρμα. Επιτυχής διάγνωση και επίλυση legacy bugs παράλληλα με την υλοποίηση νέων modules που ζητήθηκαν από τον πελάτη."
+            },
+            {
+                "title": "mp3convert.tech",
+                "description": "Προηγμένο εργαλείο πολυμέσων που αξιοποιεί επεξεργασία client-side για την ελαχιστοποίηση του φόρτου στον server. Υποστηρίζεται από Next.js backend και συνδέεται με υψηλής απόδοσης Golang API για real-time streaming."
+            },
+            {
+                "title": "yt2mp3.tech",
+                "description": "Μια ολοκληρωμένη SaaS πλατφόρμα. Διαχείριση πλήρους κύκλου ζωής προϊόντος από το UI/UX design έως το deployment, με έμφαση στο responsive design και τη διατήρηση χρηστών."
+            },
+            {
+                "title": "Modular React Blog",
+                "description": "Μια εξερεύνηση της \"βάσει components\" αρχιτεκτονικής. Δημιουργήθηκε για να επιδείξει ευχέρεια στη χρήση React hooks, στα μοτίβα διαχείρισης κατάστασης (state management) και στο dynamic routing."
+            },
+            {
+                "title": "Chaotic Destiny Hosting",
+                "description": "Front-end ανάπτυξη για τον πάροχο hosting. Άμεση συνεργασία με τη διοίκηση για τη μετατροπή των επιχειρηματικών απαιτήσεων σε responsive διεπαφές."
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Ας μιλήσουμε",
+        "description": "Αυτή τη στιγμή είμαι διαθέσιμος για freelance έργα. Αν χρειάζεστε μια αποτελεσματική λύση για το project σας, ή θέλετε να συζητήσουμε για σύγχρονες τεχνολογίες web, επικοινωνήστε μαζί μου.",
+        "phone": "Τηλέφωνο",
+        "email": "Email",
+        "socials": "Social Media",
+        "form": {
+            "nameLabel": "Ονοματεπώνυμο",
+            "namePlaceholder": "Γιάννης Παπαδόπουλος",
+            "emailLabel": "Email",
+            "emailPlaceholder": "john@example.com",
+            "messageLabel": "Μήνυμα",
+            "messagePlaceholder": "Πείτε μου για το project σας...",
+            "sending": "Αποστολή...",
+            "sent": "Στάλθηκε",
+            "send": "Αποστολή Μηνύματος",
+            "successMessage": "Ευχαριστώ! Το μήνυμα ελήφθη.",
+            "errorMessage": "Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά αργότερα."
+        }
+    },
+    "Footer": {
+        "rights": "© {year} Ιωάννης Λαμπρόπουλος. Με επιφύλαξη παντός δικαιώματος.",
+        "email": "Email",
+        "github": "GitHub",
+        "top": "Κορυφή"
+    }
+}
