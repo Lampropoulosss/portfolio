@@ -1,4 +1,9 @@
 {
+    "Metadata": {
+        "title": "Ioannis Lampropoulos | Portfolio",
+        "description": "Portfolio of Ioannis Lampropoulos, Software Engineer.",
+        "keywords": "Software Engineer, Web Developer, React, Next.js, .NET, Ioannis Lampropoulos, Portfolio"
+    },
     "Navbar": {
         "about": "About",
         "experience": "Experience",

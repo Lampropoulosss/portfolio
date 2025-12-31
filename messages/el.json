@@ -1,4 +1,9 @@
 {
+    "Metadata": {
+        "title": "Ιωάννης Λαμπρόπουλος | Χαρτοφυλάκιο",
+        "description": "Το Portfolio του Ιωάννη Λαμπρόπουλου, Software Engineer.",
+        "keywords": "Software Engineer, Web Developer, React, Next.js, .NET, Ιωάννης Λαμπρόπουλος, Portfolio"
+    },
     "Navbar": {
         "about": "Σχετικά",
         "experience": "Εμπειρία",

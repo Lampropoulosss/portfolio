@@ -1,7 +1,7 @@
 import "../globals.css";
 import { Inter, Outfit } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
@@ -15,28 +15,42 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Ioannis Lampropoulos | Portfolio",
-  description: "Portfolio of Ioannis Lampropoulos, Software Engineer.",
-  metadataBase: new URL('https://ioannislampropoulos.com'),
-  openGraph: {
-    title: "Ioannis Lampropoulos | Portfolio",
-    description: "Portfolio of Ioannis Lampropoulos, Software Engineer.",
-    url: 'https://ioannislampropoulos.com',
-    siteName: 'Ioannis Lampropoulos',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary',
-    title: "Ioannis Lampropoulos | Portfolio",
-    description: "Portfolio of Ioannis Lampropoulos, Software Engineer.",
-  },
-};
-
 export const viewport = {
   themeColor: '#38bdf8',
 };
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    metadataBase: new URL('https://ioannislampropoulos.com'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: 'https://ioannislampropoulos.com',
+      siteName: 'Ioannis Lampropoulos',
+      locale: locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title: t('title'),
+      description: t('description'),
+    },
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        'en': '/en',
+        'el': '/el',
+        'x-default': '/en',
+      },
+    }
+  };
+}
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
