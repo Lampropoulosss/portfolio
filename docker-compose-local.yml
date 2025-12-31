@@ -1,9 +1,11 @@
 services:
   cv-website:
-    image: ghcr.io/Lampropoulosss/portfolio:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: cv-website
     restart: always
     ports:
-      - "4000:3000"
+      - "3000:3000"
     env_file:
       - .env
