@@ -1,6 +1,6 @@
 services:
   cv-website:
-    image: ghcr.io/Lampropoulosss/portfolio:latest
+    image: ghcr.io/lampropoulosss/portfolio:latest
     container_name: cv-website
     restart: always
     ports:
