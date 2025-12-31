@@ -15,7 +15,6 @@ export const metadata = {
   title: "Ioannis Lampropoulos | Portfolio",
   description: "Portfolio of Ioannis Lampropoulos, Software Engineer.",
   metadataBase: new URL('https://ioannislampropoulos.com'),
-  themeColor: '#38bdf8',
   openGraph: {
     title: "Ioannis Lampropoulos | Portfolio",
     description: "Portfolio of Ioannis Lampropoulos, Software Engineer.",
@@ -29,6 +28,10 @@ export const metadata = {
     title: "Ioannis Lampropoulos | Portfolio",
     description: "Portfolio of Ioannis Lampropoulos, Software Engineer.",
   },
+};
+
+export const viewport = {
+  themeColor: '#38bdf8',
 };
 
 export default function RootLayout({ children }) {
