@@ -3,10 +3,12 @@
 import styles from './Contact.module.css';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export default function Contact() {
     const t = useTranslations('Contact');
     const [status, setStatus] = useState('');
+    const [token, setToken] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,6 +18,7 @@ export default function Contact() {
             name: e.target.name.value,
             email: e.target.email.value,
             message: e.target.message.value,
+            token,
         };
 
         try {
@@ -92,7 +95,15 @@ export default function Contact() {
                         <textarea id="message" name="message" rows="5" required placeholder={t('form.messagePlaceholder')}></textarea>
                     </div>
 
-                    <button type="submit" className={styles.submitBtn} disabled={status === 'sending' || status === 'sent'}>
+                    <div className={styles.formGroup} style={{ marginBottom: '1rem' }}>
+                        <Turnstile
+                            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                            onSuccess={setToken}
+                            options={{ theme: 'light' }}
+                        />
+                    </div>
+
+                    <button type="submit" className={styles.submitBtn} disabled={status === 'sending' || status === 'sent' || !token}>
                         {status === 'sending' ? t('form.sending') : status === 'sent' ? t('form.sent') : t('form.send')}
                     </button>
 
