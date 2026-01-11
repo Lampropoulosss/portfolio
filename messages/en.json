@@ -127,7 +127,7 @@
         "socials": "Socials",
         "form": {
             "nameLabel": "Your Name",
-            "namePlaceholder": "John Doe",
+            "namePlaceholder": "Jane Smith",
             "emailLabel": "Email Address",
             "emailPlaceholder": "john@example.com",
             "messageLabel": "Message",
