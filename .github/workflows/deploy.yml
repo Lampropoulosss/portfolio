@@ -38,12 +38,13 @@ jobs:
             type=raw,value=latest
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          provenance: false
           build-args: |
             NEXT_PUBLIC_TURNSTILE_SITE_KEY=${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
 
@@ -63,12 +64,12 @@ jobs:
             cd ~/lampropoulos-cv-website
             # Login to GitHub Container Registry on VPS
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            
+
             # Pull the new image
             docker compose pull
-            
+
             # Restart containers (recreates them with new image)
             docker compose up -d
-            
+
             # Clean up unused images to save disk space
             docker image prune -f
