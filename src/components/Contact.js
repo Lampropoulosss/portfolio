@@ -75,6 +75,9 @@ export default function Contact() {
                             <a href="https://github.com/Lampropoulosss" target="_blank" rel="noopener noreferrer" className={styles.link}>
                                 GitHub
                             </a>
+                            <a href="https://www.linkedin.com/in/ioannislampropoulos05" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                                LinkedIn
+                            </a>
                         </div>
                     </div>
                 </div>

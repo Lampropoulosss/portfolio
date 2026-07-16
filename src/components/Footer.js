@@ -28,6 +28,9 @@ export default function Footer() {
                     <a href="https://github.com/Lampropoulosss" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                         {t('github')}
                     </a>
+                    <a href="https://www.linkedin.com/in/ioannislampropoulos05" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        {t('linkedin')}
+                    </a>
 
                     {/* Scroll to Top Button */}
                     <button onClick={scrollToTop} className={styles.scrollBtn}>
