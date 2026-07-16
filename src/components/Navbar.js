@@ -15,6 +15,7 @@ export default function Navbar() {
                 <li><a href="#about" className={styles.navLink}>{t('about')}</a></li>
                 <li><a href="#experience" className={styles.navLink}>{t('experience')}</a></li>
                 <li><a href="#projects" className={styles.navLink}>{t('projects')}</a></li>
+                <li><a href="#services" className={styles.navLink}>{t('services')}</a></li>
                 <li><a href="#contact" className={styles.contactBtn}>{t('contact')}</a></li>
             </ul>
         </nav>
