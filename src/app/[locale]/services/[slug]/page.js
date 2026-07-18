@@ -26,6 +26,7 @@ export default async function ServicePage({ params }) {
     }
 
     const t = await getTranslations({ locale, namespace: `Services.list.${service.translationKey}` });
+    const tCommon = await getTranslations({ locale, namespace: 'Services' });
 
     return (
         <main className={styles.container}>
@@ -37,18 +38,18 @@ export default async function ServicePage({ params }) {
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>The Challenge</h2>
-                <p className={styles.text}>{t('problem')}</p>
+                <h2 className={styles.sectionTitle}>{tCommon('theChallenge')}</h2>
+                <p className={styles.text}>{t('theChallenge')}</p>
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>Technologies Used</h2>
-                <p className={styles.text}>{t('stack')}</p>
+                <h2 className={styles.sectionTitle}>{tCommon('technologiesUsed')}</h2>
+                <p className={styles.text}>{t('technologiesUsed')}</p>
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>Outcome & Value</h2>
-                <p className={styles.text}>{t('outcome')}</p>
+                <h2 className={styles.sectionTitle}>{tCommon('outcomeValue')}</h2>
+                <p className={styles.text}>{t('outcomeValue')}</p>
             </div>
         </main>
     );

@@ -181,38 +181,41 @@
     "description": "I provide complete technical solutions designed to save you time and add value to your business.",
     "readMore": "Read More",
     "seeAllServices": "See All Services",
+    "theChallenge": "The Challenge",
+    "technologiesUsed": "Technologies Used",
+    "outcomeValue": "Outcome & Value",
     "list": {
       "customWebApplications": {
         "title": "Custom Web Applications",
-        "description": "Tailor-made web applications built to make your daily operations easier, faster, and more efficient.",
         "startingAt": "Starting at €1,000",
-        "problem": "Off-the-shelf software often fails to meet unique business workflows, leading to inefficiencies and workarounds.",
-        "stack": ".NET Web API, React, Next.js, Node.js, Docker",
-        "outcome": "Fully customized, scalable solutions that perfectly align with your business logic, increasing overall productivity."
+        "description": "Tailor-made web applications built to make your daily operations easier, faster, and more efficient.",
+        "theChallenge": "Off-the-shelf software often forces businesses to change their workflows to fit the tool, leading to inefficiencies, manual data entry, and frustrating workarounds. As your business scales, these rigid systems become bottlenecks. You need software that adapts to how you work, not the other way around.",
+        "technologiesUsed": ".NET Web API, React, Next.js, Node.js, Docker",
+        "outcomeValue": "I build fully customized, scalable web applications that perfectly map to your unique business logic. By automating repetitive tasks and streamlining complex workflows, these custom solutions drastically increase your team's productivity and give you a robust foundation that grows alongside your business."
       },
       "eshopDevelopment": {
         "title": "E-Commerce Development",
-        "description": "Modern online stores with secure payments and fast navigation, designed to boost your sales.",
         "startingAt": "Starting at €1,500",
-        "problem": "Slow, clunky, or unsecure online stores lead to high cart abandonment rates and lost revenue.",
-        "stack": "Next.js, Stripe/PayPal Integration, Headless CMS",
-        "outcome": "High-conversion e-shops with lightning-fast load times, seamless checkout, and robust security."
+        "description": "Modern online stores with secure payments and fast navigation, designed to boost your sales.",
+        "theChallenge": "A slow, clunky, or unsecure online store is the fastest way to lose a customer. High cart abandonment rates, confusing checkout processes, and poor mobile optimization directly translate to lost revenue. In today's competitive market, your e-shop needs to be faster and more reliable than the competition.",
+        "technologiesUsed": "Next.js, Stripe/PayPal Integration, Headless CMS",
+        "outcomeValue": "I develop high-conversion, modern e-commerce platforms with lightning-fast page loads and seamless, secure checkout experiences. By focusing on technical SEO and flawless mobile responsiveness, your new e-shop will not only attract more organic traffic but actively convert those visitors into paying customers."
       },
       "corporateWebsiteDesign": {
         "title": "Corporate Website Design",
-        "description": "Professional, fast, and mobile-friendly websites that showcase your brand and attract new customers.",
         "startingAt": "Starting at €400",
-        "problem": "A poor digital presence harms brand credibility and makes it difficult for potential clients to trust your business.",
-        "stack": "React, Next.js, CSS3/Tailwind, SEO Optimization",
-        "outcome": "A stunning, highly-performant corporate site that ranks well on Google and converts visitors into leads."
+        "description": "Professional, fast, and mobile-friendly websites that showcase your brand and attract new customers.",
+        "theChallenge": "Your website is your digital storefront. A dated, slow, or generic digital presence actively harms your brand's credibility and makes potential clients second-guess trusting you. Relying on heavy, bloated templates means your site won't rank well on Google, leaving you invisible to local searchers.",
+        "technologiesUsed": "React, Next.js, CSS3/Tailwind, SEO Optimization",
+        "outcomeValue": "I design and develop stunning, highly performant corporate websites that serve as a 24/7 lead generation tool. Built from the ground up for speed and search engine visibility, your site will showcase your brand's authority, build instant trust, and rank prominently on Google to attract new clients."
       },
       "maintenanceTechnicalSupport": {
         "title": "Maintenance & Technical Support (SEO)",
-        "description": "Continuous monitoring, speed optimization (SEO), security updates, and quick bug fixes to give you peace of mind.",
         "startingAt": "Hourly rates & monthly retainers available",
-        "problem": "Without proper maintenance, websites degrade over time, become vulnerable to hacks, and lose SEO rankings.",
-        "stack": "Automated Testing (Python), Docker, Azure, Uptime Monitoring",
-        "outcome": "Guaranteed uptime, peak performance, and peace of mind knowing your digital assets are fully managed."
+        "description": "Continuous monitoring, speed optimization (SEO), security updates, and quick bug fixes to give you peace of mind.",
+        "theChallenge": "Launching a website is just step one. Without ongoing maintenance, web applications degrade over time. Plugins break, code becomes vulnerable to hacks, and slow load times eventually destroy your SEO rankings. Business owners often waste hours trying to fix technical bugs instead of running their company.",
+        "technologiesUsed": "Automated Testing (Python), Docker, Azure, Uptime Monitoring",
+        "outcomeValue": "I provide complete peace of mind through continuous monitoring, proactive security patching, and aggressive speed optimizations. I handle the technical heavy lifting, ensuring guaranteed uptime and peak performance so your digital assets remain secure, fast, and highly ranked on search engines."
       }
     }
   },
