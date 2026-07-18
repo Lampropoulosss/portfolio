@@ -66,6 +66,54 @@ export default async function RootLayout({ children, params }) {
 
   const messages = await getMessages();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ioannis Lampropoulos",
+    "url": "https://ioannislampropoulos.com",
+    "areaServed": locale === 'el' ? "Greece" : "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Development Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Corporate Website Design"
+          },
+          "price": "400",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Web Applications"
+          },
+          "price": "1000",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "E-Commerce Development"
+          },
+          "price": "1500",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Maintenance & Technical Support (SEO)"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
       <body>
@@ -74,6 +122,10 @@ export default async function RootLayout({ children, params }) {
           {children}
           <Footer />
         </NextIntlClientProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

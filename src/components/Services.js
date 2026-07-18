@@ -20,7 +20,7 @@ export default function Services({ limit }) {
                             <div className={styles.content}>
                                 <h3 className={styles.cardTitle}>{t(`list.${service.translationKey}.title`)}</h3>
                                 <p className={styles.cardDesc}>{t(`list.${service.translationKey}.description`)}</p>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto', gap: '1rem' }}>
                                     <span className={styles.priceTag}>
                                         {t(`list.${service.translationKey}.startingAt`)}
                                     </span>

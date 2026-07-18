@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Services limit={3} />
+      <Services limit={4} />
       <Projects limit={3} />
     </main>
   );
