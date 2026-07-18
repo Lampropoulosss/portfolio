@@ -5,6 +5,7 @@ import { servicesData } from '@/lib/data';
 
 export default function Services({ limit }) {
     const t = useTranslations('Services');
+    const tHero = useTranslations('Hero');
     const displayedServices = limit ? servicesData.slice(0, limit) : servicesData;
 
     return (
@@ -32,10 +33,19 @@ export default function Services({ limit }) {
                         </div>
                     ))}
                 </div>
-                {limit && (
-                    <div style={{ textAlign: 'center', marginTop: '40px' }}>
-                        <Link href="/services" className={styles.priceTag} style={{ background: 'var(--primary)', color: 'var(--background)', display: 'inline-block', fontSize: '1.1rem', padding: '15px 30px' }}>
+                {limit ? (
+                    <div className="ctaButtons">
+                        <Link href="/services" className="btn-primary">
                             {t('seeAllServices')}
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="ctaButtons">
+                        <Link href="/projects" className="btn-primary">
+                            {tHero('checkWork')}
+                        </Link>
+                        <Link href="/contact" className="btn-secondary">
+                            {tHero('contactMe')}
                         </Link>
                     </div>
                 )}

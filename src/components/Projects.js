@@ -6,6 +6,7 @@ import { projectData } from '@/lib/data';
 
 export default function Projects({ limit }) {
     const t = useTranslations('Projects');
+    const tHero = useTranslations('Hero');
     const displayedProjects = limit ? projectData.slice(0, limit) : projectData;
 
     return (
@@ -45,10 +46,16 @@ export default function Projects({ limit }) {
                         </div>
                     ))}
                 </div>
-                {limit && (
-                    <div style={{ textAlign: 'center', marginTop: '40px' }}>
-                        <Link href="/projects" className={styles.link} style={{ padding: '15px 30px', fontSize: '1.1rem' }}>
+                {limit ? (
+                    <div className="ctaButtons">
+                        <Link href="/projects" className="btn-primary">
                             {t('seeAllProjects')}
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="ctaButtons">
+                        <Link href="/contact" className="btn-primary">
+                            {tHero('contactMe')}
                         </Link>
                     </div>
                 )}

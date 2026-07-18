@@ -1,8 +1,10 @@
 import styles from './About.module.css';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 export default function About() {
     const t = useTranslations('About');
+    const tHero = useTranslations('Hero');
 
     return (
         <section id="about" className={styles.about}>
@@ -44,6 +46,15 @@ export default function About() {
                         <p style={{ marginBottom: 0 }}><strong>{t('locationLabel')}</strong> {t('locationValue')}</p>
                         <p style={{ marginBottom: 0 }}><strong>{t('availabilityLabel')}</strong> {t('availabilityValue')}</p>
                     </div>
+                </div>
+
+                <div className="ctaButtons">
+                    <Link href="/projects" className="btn-primary">
+                        {tHero('checkWork')}
+                    </Link>
+                    <Link href="/contact" className="btn-secondary">
+                        {tHero('contactMe')}
+                    </Link>
                 </div>
             </div>
         </section>

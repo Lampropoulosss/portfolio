@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { projectData } from '@/lib/data';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import styles from './ProjectDetail.module.css';
 
@@ -27,6 +28,7 @@ export default async function ProjectPage({ params }) {
     }
 
     const t = await getTranslations({ locale, namespace: `Projects.list.${project.translationKey}` });
+    const tHero = await getTranslations({ locale, namespace: 'Hero' });
 
     return (
         <main className={styles.container}>
@@ -73,9 +75,14 @@ export default async function ProjectPage({ params }) {
                 <p className={styles.text}>{t('caseStudy.outcome')}</p>
             </div>
 
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                {locale === 'el' ? 'Επίσκεψη στο Έργο' : 'Visit Project'}
-            </a>
+            <div className="ctaButtons">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                    {locale === 'el' ? 'Επίσκεψη στο Έργο' : 'Visit Project'}
+                </a>
+                <Link href="/contact" className="btn-secondary">
+                    {tHero('contactMe')}
+                </Link>
+            </div>
         </main>
     );
 }

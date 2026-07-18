@@ -1,8 +1,10 @@
 import styles from './Experience.module.css';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 export default function Experience() {
     const t = useTranslations('Experience');
+    const tHero = useTranslations('Hero');
 
     const renderJob = (key) => (
         <div className={styles.item}>
@@ -37,6 +39,15 @@ export default function Experience() {
 
                     {/* Early Experience */}
                     {renderJob('jobs.3')}
+                </div>
+
+                <div className="ctaButtons">
+                    <Link href="/projects" className="btn-primary">
+                        {tHero('checkWork')}
+                    </Link>
+                    <Link href="/contact" className="btn-secondary">
+                        {tHero('contactMe')}
+                    </Link>
                 </div>
             </div>
         </section>
