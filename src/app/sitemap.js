@@ -29,6 +29,8 @@ export default function sitemap() {
             routing.locales.forEach(l => {
                 alternates[l] = page === '' ? `${baseUrl}/${l}` : `${baseUrl}/${l}${page}`;
             });
+            // Add x-default pointing to the English version
+            alternates['x-default'] = page === '' ? `${baseUrl}/en` : `${baseUrl}/en${page}`;
 
             sitemapEntries.push({
                 url: `${baseUrl}${path}`,
