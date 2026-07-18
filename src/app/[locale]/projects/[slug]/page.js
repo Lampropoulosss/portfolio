@@ -16,6 +16,13 @@ export async function generateMetadata({ params }) {
     return {
         title: t('caseStudy.title'),
         description: t('description'),
+        alternates: {
+            canonical: `/${locale}/projects/${slug}`,
+            languages: {
+                'en': `/en/projects/${slug}`,
+                'el': `/el/projects/${slug}`,
+            },
+        },
     };
 }
 

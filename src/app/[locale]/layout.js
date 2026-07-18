@@ -46,14 +46,6 @@ export async function generateMetadata({ params }) {
       title: t('title'),
       description: t('description'),
     },
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        'en': '/en',
-        'el': '/el',
-        'x-default': '/en',
-      },
-    }
   };
 }
 
