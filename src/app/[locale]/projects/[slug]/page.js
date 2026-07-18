@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
     const t = await getTranslations({ locale, namespace: `Projects.list.${project.translationKey}` });
 
     return {
-        title: t('title'),
+        title: t('caseStudy.title'),
         description: t('description'),
     };
 }
@@ -30,12 +30,11 @@ export default async function ProjectPage({ params }) {
 
     return (
         <main className={styles.container}>
-            <h1 className={styles.title}>{t('title')}</h1>
+            <h1 className={styles.title}>{t('caseStudy.title')}</h1>
             
-            <div className={styles.tags}>
-                {project.tags.map((tag, i) => (
-                    <span key={i} className={styles.tag}>{tag}</span>
-                ))}
+            <div className={styles.metaInfo}>
+                <p><strong>{locale === 'el' ? 'Τεχνολογίες (Tech Stack):' : 'Tech Stack:'}</strong> {t('caseStudy.techStack')}</p>
+                <p><strong>{locale === 'el' ? 'Ρόλος:' : 'Role:'}</strong> {t('caseStudy.role')}</p>
             </div>
 
             <div className={styles.imageWrapper}>
@@ -49,25 +48,23 @@ export default async function ProjectPage({ params }) {
                 />
             </div>
 
-            <p className={styles.description}>{t('description')}</p>
-
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>The Problem</h2>
-                <p className={styles.text}>{t('problem')}</p>
+                <h2 className={styles.sectionTitle}>{locale === 'el' ? 'Η Πρόκληση' : 'The Challenge'}</h2>
+                <p className={styles.text}>{t('caseStudy.challenge')}</p>
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>Technical Stack</h2>
-                <p className={styles.text}>{t('stack')}</p>
+                <h2 className={styles.sectionTitle}>{locale === 'el' ? 'Η Προσέγγιση & Τεχνική Υλοποίηση' : 'My Approach & Technical Execution'}</h2>
+                <p className={styles.text}>{t('caseStudy.approach')}</p>
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>Measurable Outcome</h2>
-                <p className={styles.text}>{t('outcome')}</p>
+                <h2 className={styles.sectionTitle}>{locale === 'el' ? 'Το Αποτέλεσμα' : 'The Outcome'}</h2>
+                <p className={styles.text}>{t('caseStudy.outcome')}</p>
             </div>
 
             <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                Visit Project
+                {locale === 'el' ? 'Επίσκεψη στο Έργο' : 'Visit Project'}
             </a>
         </main>
     );

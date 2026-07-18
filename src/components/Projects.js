@@ -48,7 +48,7 @@ export default function Projects({ limit }) {
                 {limit && (
                     <div style={{ textAlign: 'center', marginTop: '40px' }}>
                         <Link href="/projects" className={styles.link} style={{ padding: '15px 30px', fontSize: '1.1rem' }}>
-                            See All Projects
+                            {t('seeAllProjects')}
                         </Link>
                     </div>
                 )}

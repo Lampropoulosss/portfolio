@@ -25,7 +25,7 @@ export default function Services({ limit }) {
                                         {t(`list.${service.translationKey}.startingAt`)}
                                     </span>
                                     <Link href={`/services/${service.slug}`} className={styles.priceTag} style={{ background: 'var(--primary)', color: 'var(--background)' }}>
-                                        Read More
+                                        {t('readMore')}
                                     </Link>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@ export default function Services({ limit }) {
                 {limit && (
                     <div style={{ textAlign: 'center', marginTop: '40px' }}>
                         <Link href="/services" className={styles.priceTag} style={{ background: 'var(--primary)', color: 'var(--background)', display: 'inline-block', fontSize: '1.1rem', padding: '15px 30px' }}>
-                            See All Services
+                            {t('seeAllServices')}
                         </Link>
                     </div>
                 )}

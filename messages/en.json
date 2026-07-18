@@ -97,47 +97,90 @@
   "Projects": {
     "title": "Featured Projects",
     "viewProject": "View Project",
+    "seeAllProjects": "See All Projects",
     "list": {
       "robinrich": {
         "title": "robinrich.gr",
         "description": "Production maintenance and feature expansion for an active commercial platform. Successfully diagnosed and resolved legacy bugs while implementing new client-requested modules.",
         "problem": "The platform had legacy code issues, slow page loads, and lacked key engagement features requested by customers.",
         "stack": "React, Next.js, Firebase, CSS3 Modules",
-        "outcome": "Resolved critical bugs, increased engagement by delivering new modules, and improved overall speed and UX."
+        "outcome": "Resolved critical bugs, increased engagement by delivering new modules, and improved overall speed and UX.",
+        "caseStudy": {
+          "title": "robinrich.gr: Revamping an Active Commercial Platform for Speed and Stability",
+          "techStack": "React, Next.js, Firebase, CSS3 Modules",
+          "role": "Full-Stack Web Developer & Maintainer",
+          "challenge": "For an active commercial platform, every second the page is slow or inaccessible is a lost customer and lost sales. Robinrich.gr came to me for exactly that, a very real problem with an existing platform hobbled by technical debt, poor performance and missing essential features users actually wanted. They needed someone to come in, find deep underlying problems with a functioning site and add modern modules without destroying it.",
+          "approach": "I took on production maintenance and development for the site prioritizing stability at all times. Starting by delving into legacy codebase to find and identify areas of low performance. I began with refactoring existing messy components in Next.js and React, diagnosed and fixed key legacy bugs, streamlined the data architecture using Firebase and updated the styling approach using CSS3 Modules. Once the code base was healthy, I worked directly with the stakeholders to translate their vision into functional requirements and built/deployed new custom modules.",
+          "outcome": "As a result the site’s loading times became significantly faster, delivering a much more enjoyable experience for users and increased their engagement. The new modules have had a real positive impact, and the stable foundation gives the client room to grow without worry."
+        }
       },
       "mp3convert": {
         "title": "mp3convert.tech",
         "description": "Advanced media tool leveraging client-side processing for conversion to minimize server load. Powered by a Next.js backend, integrated with a high-throughput Golang API for real-time streaming.",
         "problem": "Traditional media conversion requires heavy server resources, which scales poorly and incurs high hosting costs.",
         "stack": "Next.js, Golang, Client-Side Processing (WebAssembly), FFmpeg",
-        "outcome": "Drastically reduced server load by shifting processing to the client. Real-time streaming API handles throughput smoothly."
+        "outcome": "Drastically reduced server load by shifting processing to the client. Real-time streaming API handles throughput smoothly.",
+        "caseStudy": {
+          "title": "mp3convert.tech: Pioneering Client-Side Media Conversion to Slash Server Costs",
+          "techStack": "Next.js, Golang, Client-Side Processing (WebAssembly), FFmpeg",
+          "role": "Lead Developer & Architect",
+          "challenge": "Massive drawback to other conversion tools in market - the bottleneck: Other media conversion tools in the market make use of a server. Each file a user converts is consuming the server's resources, which does not scale well with the increase of user base, resulting in a large number of hosting expenses. So I was aiming to create an awesome product that completely cuts down the usage of the server, providing a lightning-fast service at a cheap cost.",
+          "approach": "The Inverse Approach: Instead of following the standard architecture that most media conversion tools use, I went in the inverse direction.",
+          "outcome": "I offload most of the workload to the user's browser. Built a client-side rendering system with Next.js and integrated WebAssembly with FFmpeg for all the media conversions. Added a Golang backend API that manages the stream of the incoming request and routing of the data between WebAssembly and Golang efficiently for real-time stream of the conversion output."
+        }
       },
       "yt2mp3": {
         "title": "yt2mp3.tech",
         "description": "A comprehensive media SaaS platform. Handled the full product lifecycle from UI/UX design to deployment, focusing on responsive design and user retention.",
         "problem": "There was a need for a highly reliable, fast, and user-friendly media conversion tool with good SEO standing.",
         "stack": "Next.js, React, Node.js",
-        "outcome": "Attracted a steady user base, ranked well on search engines (SEO), and provided a seamless conversion experience."
+        "outcome": "Attracted a steady user base, ranked well on search engines (SEO), and provided a seamless conversion experience.",
+        "caseStudy": {
+          "title": "yt2mp3.tech: Building a High-Traffic Media SaaS from Scratch",
+          "techStack": "Next.js, React, Node.js",
+          "role": "Founder & Lead Developer",
+          "challenge": "The web is full of clunky, slow, and untrustworthy media conversion sites. There was a clear market gap for a highly reliable, lightning-fast, and user-friendly platform that actually respected the user experience. Furthermore, to survive in this highly competitive niche, the platform needed an incredibly strong technical SEO foundation to drive organic traffic without relying on paid ads.",
+          "approach": "I took full ownership of the product lifecycle,from sketching the initial UI/UX wireframes to architecting the backend and handling the final deployment. Built on a robust Next.js and Node.js stack, I prioritized a clean, responsive design that works flawlessly on mobile and desktop. Knowing that traffic is the lifeblood of a SaaS, I heavily optimized the application's load times and strictly integrated SEO best practices into the core framework so search engines could easily crawl, index, and rank the pages.",
+          "outcome": "The platform successfully attracted and retained a steady user base. Thanks to the deep performance optimizations, it secured strong search engine rankings, bringing in organic traffic effortlessly. Users received a seamless, ad-light conversion experience, proving that a focus on speed and good UI/UX directly translates to product success."
+        }
       },
       "modularReactBlog": {
         "title": "Modular React Blog",
         "description": "A distinct exploration of component-based architecture. Built to demonstrate proficiency in React hooks, state management patterns, and dynamic routing.",
         "problem": "Traditional monolithic blogs are often hard to extend or customize dynamically without tight coupling.",
         "stack": "React, State Management (Context/Redux), Component Architecture",
-        "outcome": "Delivered a clean, modular architecture that is easily extensible, highly performant, and simple to maintain."
+        "outcome": "Delivered a clean, modular architecture that is easily extensible, highly performant, and simple to maintain.",
+        "caseStudy": {
+          "title": "Modular React Blog: Architecting a Scalable, High-Performance Content Platform",
+          "techStack": "React, State Management (Context/Redux), Component Architecture",
+          "role": "Software Engineer",
+          "challenge": "Standard blog templates (the monolithic style) are a real pain to add functionality or dynamically extend. Since the code is very coupled together, the moment you try to add more functionality or manage state the whole site will likely crash. My goal here was to create the most responsive, user-friendly, but ultimately, easiest blog template for developers to manage, scale and grow.",
+          "approach": "I engineered this blog as a deep-dive into state of the art component-based design. It was created using React, removing bloated functionalities usually present on your average templates, focusing only on dynamic routing and solid state management patterns (with context/redux) and implementing components which are all individually, re-usable and testable.",
+          "outcome": "I delivered a state-of-the-art lightning-fast blog application built around a modular, clean component architecture which is high-performant, extensible and perfect for easy content editing. The goal from a technical point of view was to show my capability to write well-maintained, scalable code in react without it turning into a messy code-smell that you can't maintain over time as the business scales."
+        }
       },
       "chaoticDestinyHosting": {
         "title": "Chaotic Destiny Hosting",
         "description": "Front-end development for a hosting provider. Collaborated directly with management to translate business requirements into responsive web interfaces.",
         "problem": "The existing frontend was non-responsive and unintuitive, causing user drop-offs during the hosting checkout process.",
         "stack": "HTML5, CSS3, Vanilla JavaScript",
-        "outcome": "Improved user navigation and reduced support requests by providing a clear, responsive, and modern interface."
+        "outcome": "Improved user navigation and reduced support requests by providing a clear, responsive, and modern interface.",
+        "caseStudy": {
+          "title": "Chaotic Destiny Hosting: Redesigning the Front-End to Boost Conversions",
+          "techStack": "HTML5, CSS3, Vanilla JavaScript",
+          "role": "Front-End Developer",
+          "challenge": "As a web hosting provider's website is a 24/7 online shop window, Chaotic Destiny Hosting had the major problem of an unresponsive, confusing front-end. This friction resulted in losing new clients in the checkout funnel and in turn unnecessary support tickets being submitted by current customers.",
+          "approach": "Collaborating with management I took their business logic, translated it into a modern & beautiful web front-end. I threw away the clunky existing foundation, building the UI elements up with clean HTML5, CSS3, and Vanilla JS. Simultaneously, I was personally offering direct web hosting customer support, using their feedback to debug the front-end code & refine layout on both mobile & desktop devices.",
+          "outcome": "The overhaul redefined the client user-journey, providing an intuitive & speedy responsive design so clients no longer struggle navigating Chaos Destiny Hosting. As well as the drastically improved customer experience & reduced abandoned carts, navigation support tickets also plummet."
+        }
       }
     }
   },
   "Services": {
     "title": "Services",
     "description": "I provide complete technical solutions designed to save you time and add value to your business.",
+    "readMore": "Read More",
+    "seeAllServices": "See All Services",
     "list": {
       "customWebApplications": {
         "title": "Custom Web Applications",

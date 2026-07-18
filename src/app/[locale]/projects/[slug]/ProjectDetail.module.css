@@ -63,6 +63,21 @@
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--foreground);
+    white-space: pre-line;
+}
+
+.metaInfo {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+.metaInfo p {
+    margin: 5px 0;
+}
+
+.metaInfo strong {
+    color: var(--foreground);
 }
 
 .link {
