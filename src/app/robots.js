@@ -3,6 +3,7 @@ export default function robots() {
         rules: {
             userAgent: '*',
             allow: '/',
+            disallow: '/cdn-cgi/',
         },
         sitemap: 'https://ioannislampropoulos.com/sitemap.xml',
     }
