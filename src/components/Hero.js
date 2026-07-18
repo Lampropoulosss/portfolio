@@ -1,6 +1,7 @@
 import styles from './Hero.module.css';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 export default function Hero() {
     const t = useTranslations('Hero');
@@ -21,8 +22,8 @@ export default function Hero() {
                         })}
                     </p>
                     <div className={styles.ctaButtons}>
-                        <a href="#projects" className={styles.primaryBtn}>{t('checkWork')}</a>
-                        <a href="#contact" className={styles.secondaryBtn}>{t('contactMe')}</a>
+                        <Link href="/projects" className={styles.primaryBtn}>{t('checkWork')}</Link>
+                        <Link href="/contact" className={styles.secondaryBtn}>{t('contactMe')}</Link>
                     </div>
                 </div>
                 <div className={`fade-in ${styles.imageContainer}`}>

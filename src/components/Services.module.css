@@ -1,6 +1,7 @@
 .services {
     padding: 6rem 2rem;
     background: var(--card-bg);
+    flex-grow: 1;
 }
 
 .container {

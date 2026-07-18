@@ -1,6 +1,7 @@
 .contact {
-    padding: 6rem 2rem;
+    padding: 10rem 2rem 6rem;
     background: var(--card-bg);
+    flex-grow: 1;
 }
 
 .container {
