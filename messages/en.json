@@ -58,9 +58,9 @@
         "company": "@ Celani Software House",
         "period": "Dec 2024 - Apr 2026",
         "description": [
-          "Developed and maintained web applications, focusing on speed, security, and a seamless user experience.",
-          "Automated deployment processes to deliver new features to clients faster and more securely.",
-          "Wrote clean, tested code to minimize production bugs and ensure smooth operation."
+          "Architecting and building scalable web solutions using .NET (Web API), Razor Pages, React, and Next.js.",
+          "Orchestrating DevOps workflows and deployments on Debian VPS using Docker, Docker Compose, and Azure.",
+          "Engineering automated testing suites using Python to ensure code reliability and performance."
         ]
       },
       {
@@ -68,18 +68,18 @@
         "company": "@ robinrich.gr",
         "period": "Oct 2024 - Dec 2024",
         "description": [
-          "Added new, modern features based on business needs to better serve customers and increase engagement.",
-          "Optimized page load speeds and resolved technical issues, providing a smoother browsing experience."
+          "Expanded platform functionality by developing new features tailored to business requirements.",
+          "Optimized application performance and resolved critical legacy issues to ensure system stability."
         ]
       },
       {
-        "role": "Web Developer & Creator",
+        "role": "Founder & Lead Developer",
         "company": "@ yt2mp3.tech",
         "period": "Nov 2021 - June 2022",
         "description": [
-          "Designed and built an easy-to-use media conversion platform from scratch, attracting a steady user base.",
-          "Managed the entire project, from the initial concept to the final launch and ongoing web maintenance.",
-          "Implemented SEO best practices that significantly improved the site's ranking in search results."
+          "Founded and developed a full-stack media conversion platform using the Next.js framework.",
+          "Owned the entire product lifecycle, from UI/UX design to backend architecture and deployment.",
+          "Executed SEO strategies and performance optimizations to drive user traffic."
         ]
       },
       {
@@ -87,9 +87,9 @@
         "company": "@ Chaotic Destiny Hosting",
         "period": "May 2021 - Aug 2021",
         "description": [
-          "Designed a user-friendly and responsive UI to make navigation easier for hosting clients.",
-          "Provided direct technical support and effectively resolved user issues.",
-          "Improved front-end speed, ensuring a fast and reliable environment for visitors."
+          "Collaborated with the core team to design and implement responsive UI components using HTML, CSS, and JavaScript.",
+          "Provided technical support and troubleshooting for hosting clients.",
+          "Debugged front-end issues and optimized code based on feedback from senior management."
         ]
       }
     ]
@@ -97,54 +97,81 @@
   "Projects": {
     "title": "Featured Projects",
     "viewProject": "View Project",
-    "list": [
-      {
+    "list": {
+      "robinrich": {
         "title": "robinrich.gr",
-        "description": "Maintenance and upgrades for an active commercial platform. Focused on improving speed, reducing technical issues, and providing a better visitor experience."
+        "description": "Production maintenance and feature expansion for an active commercial platform. Successfully diagnosed and resolved legacy bugs while implementing new client-requested modules.",
+        "problem": "The platform had legacy code issues, slow page loads, and lacked key engagement features requested by customers.",
+        "stack": "React, Next.js, Firebase, CSS3 Modules",
+        "outcome": "Resolved critical bugs, increased engagement by delivering new modules, and improved overall speed and UX."
       },
-      {
+      "mp3convert": {
         "title": "mp3convert.tech",
-        "description": "A media conversion tool that runs lightning-fast directly in the user's browser (client-side), reducing server hosting costs."
+        "description": "Advanced media tool leveraging client-side processing for conversion to minimize server load. Powered by a Next.js backend, integrated with a high-throughput Golang API for real-time streaming.",
+        "problem": "Traditional media conversion requires heavy server resources, which scales poorly and incurs high hosting costs.",
+        "stack": "Next.js, Golang, Client-Side Processing (WebAssembly), FFmpeg",
+        "outcome": "Drastically reduced server load by shifting processing to the client. Real-time streaming API handles throughput smoothly."
       },
-      {
+      "yt2mp3": {
         "title": "yt2mp3.tech",
-        "description": "A web application built with ease of use and reliability in mind. Optimized for fast loading times and strong search engine rankings (SEO)."
+        "description": "A comprehensive media SaaS platform. Handled the full product lifecycle from UI/UX design to deployment, focusing on responsive design and user retention.",
+        "problem": "There was a need for a highly reliable, fast, and user-friendly media conversion tool with good SEO standing.",
+        "stack": "Next.js, React, Node.js",
+        "outcome": "Attracted a steady user base, ranked well on search engines (SEO), and provided a seamless conversion experience."
       },
-      {
+      "modularReactBlog": {
         "title": "Modular React Blog",
-        "description": "A modern and fast blog built with React. Perfect for quick reading and easy content management."
+        "description": "A distinct exploration of component-based architecture. Built to demonstrate proficiency in React hooks, state management patterns, and dynamic routing.",
+        "problem": "Traditional monolithic blogs are often hard to extend or customize dynamically without tight coupling.",
+        "stack": "React, State Management (Context/Redux), Component Architecture",
+        "outcome": "Delivered a clean, modular architecture that is easily extensible, highly performant, and simple to maintain."
       },
-      {
+      "chaoticDestinyHosting": {
         "title": "Chaotic Destiny Hosting",
-        "description": "Front-end redesign for a hosting provider. Turned company needs into beautiful, functional pages for mobile and desktop."
+        "description": "Front-end development for a hosting provider. Collaborated directly with management to translate business requirements into responsive web interfaces.",
+        "problem": "The existing frontend was non-responsive and unintuitive, causing user drop-offs during the hosting checkout process.",
+        "stack": "HTML5, CSS3, Vanilla JavaScript",
+        "outcome": "Improved user navigation and reduced support requests by providing a clear, responsive, and modern interface."
       }
-    ]
+    }
   },
   "Services": {
     "title": "Services",
     "description": "I provide complete technical solutions designed to save you time and add value to your business.",
-    "list": [
-      {
+    "list": {
+      "customWebApplications": {
         "title": "Custom Web Applications",
         "description": "Tailor-made web applications built to make your daily operations easier, faster, and more efficient.",
-        "startingAt": "Starting at €1,000"
+        "startingAt": "Starting at €1,000",
+        "problem": "Off-the-shelf software often fails to meet unique business workflows, leading to inefficiencies and workarounds.",
+        "stack": ".NET Web API, React, Next.js, Node.js, Docker",
+        "outcome": "Fully customized, scalable solutions that perfectly align with your business logic, increasing overall productivity."
       },
-      {
+      "eshopDevelopment": {
         "title": "E-Commerce Development",
         "description": "Modern online stores with secure payments and fast navigation, designed to boost your sales.",
-        "startingAt": "Starting at €1,500"
+        "startingAt": "Starting at €1,500",
+        "problem": "Slow, clunky, or unsecure online stores lead to high cart abandonment rates and lost revenue.",
+        "stack": "Next.js, Stripe/PayPal Integration, Headless CMS",
+        "outcome": "High-conversion e-shops with lightning-fast load times, seamless checkout, and robust security."
       },
-      {
+      "corporateWebsiteDesign": {
         "title": "Corporate Website Design",
         "description": "Professional, fast, and mobile-friendly websites that showcase your brand and attract new customers.",
-        "startingAt": "Starting at €400"
+        "startingAt": "Starting at €400",
+        "problem": "A poor digital presence harms brand credibility and makes it difficult for potential clients to trust your business.",
+        "stack": "React, Next.js, CSS3/Tailwind, SEO Optimization",
+        "outcome": "A stunning, highly-performant corporate site that ranks well on Google and converts visitors into leads."
       },
-      {
+      "maintenanceTechnicalSupport": {
         "title": "Maintenance & Technical Support (SEO)",
         "description": "Continuous monitoring, speed optimization (SEO), security updates, and quick bug fixes to give you peace of mind.",
-        "startingAt": "Hourly rates & monthly retainers available"
+        "startingAt": "Hourly rates & monthly retainers available",
+        "problem": "Without proper maintenance, websites degrade over time, become vulnerable to hacks, and lose SEO rankings.",
+        "stack": "Automated Testing (Python), Docker, Azure, Uptime Monitoring",
+        "outcome": "Guaranteed uptime, peak performance, and peace of mind knowing your digital assets are fully managed."
       }
-    ]
+    }
   },
   "Contact": {
     "title": "Let's Connect",

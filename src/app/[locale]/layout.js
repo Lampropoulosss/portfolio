@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,7 +26,10 @@ export async function generateMetadata({ params }) {
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
-    title: t('title'),
+    title: {
+      template: '%s | Ioannis Lampropoulos',
+      default: t('title')
+    },
     description: t('description'),
     keywords: t('keywords'),
     metadataBase: new URL('https://ioannislampropoulos.com'),
@@ -65,7 +70,9 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

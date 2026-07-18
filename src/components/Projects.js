@@ -1,56 +1,31 @@
 import styles from './Projects.module.css';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import { projectData } from '@/lib/data';
 
-const projectData = [
-    {
-        tags: ["Next.js", "Firebase", "CSS3", "Maintenance"],
-        image: "/images/project_robinrich.png",
-        link: "https://robinrich.gr"
-    },
-    {
-        tags: ["Next.js", "Golang (Stream API)", "Client-Side Processing"],
-        image: "/images/project_mp3convert.png",
-        link: "https://github.com/Lampropoulosss/mp3convert.tech"
-    },
-    {
-        tags: ["Next.js", "React", "Node.js", "UX/UI"],
-        image: "/images/project_yt2mp3.png",
-        link: "https://yt2mp3.tech"
-    },
-    {
-        tags: ["React", "State Management", "Component Architecture"],
-        image: "/images/project_blog.png",
-        link: "https://github.com/Lampropoulosss/Simple-React-Blog"
-    },
-    {
-        tags: ["HTML5", "CSS3", "JavaScript", "Customer Support"],
-        image: "/images/project_hosting.png",
-        link: "https://github.com/Lampropoulosss/Chaotic-Destiny-Hosting"
-    },
-];
-
-export default function Projects() {
+export default function Projects({ limit }) {
     const t = useTranslations('Projects');
+    const displayedProjects = limit ? projectData.slice(0, limit) : projectData;
 
     return (
         <section id="projects" className={styles.projects}>
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>{t('title')}</h2>
                 <div className={styles.grid}>
-                    {projectData.map((project, index) => (
-                        <div key={index} className={styles.card}>
+                    {displayedProjects.map((project) => (
+                        <div key={project.id} className={styles.card}>
                             <div className={styles.imageWrapper}>
                                 <Image
                                     src={project.image}
-                                    alt={t(`list.${index}.title`)}
+                                    alt={t(`list.${project.translationKey}.title`)}
                                     width={400}
                                     height={250}
                                     className={styles.projectImage}
                                 />
                             </div>
                             <div className={styles.content}>
-                                <h3 className={styles.cardTitle}>{t(`list.${index}.title`)}</h3>
+                                <h3 className={styles.cardTitle}>{t(`list.${project.translationKey}.title`)}</h3>
 
                                 {/* Tech Stack Tags */}
                                 <div className={styles.tags}>
@@ -59,17 +34,24 @@ export default function Projects() {
                                     ))}
                                 </div>
 
-                                <p className={styles.cardDesc}>{t(`list.${index}.description`)}</p>
+                                <p className={styles.cardDesc}>{t(`list.${project.translationKey}.description`)}</p>
 
                                 <div className={styles.links}>
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                                    <Link href={`/projects/${project.slug}`} className={styles.link}>
                                         {t('viewProject')} &rarr;
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
+                {limit && (
+                    <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                        <Link href="/projects" className={styles.link} style={{ padding: '15px 30px', fontSize: '1.1rem' }}>
+                            See All Projects
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );

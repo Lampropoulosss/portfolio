@@ -12,11 +12,11 @@ export default function Navbar() {
             </Link>
 
             <ul className={styles.navLinks}>
-                <li><a href="#about" className={styles.navLink}>{t('about')}</a></li>
-                <li><a href="#experience" className={styles.navLink}>{t('experience')}</a></li>
-                <li><a href="#projects" className={styles.navLink}>{t('projects')}</a></li>
-                <li><a href="#services" className={styles.navLink}>{t('services')}</a></li>
-                <li><a href="#contact" className={styles.contactBtn}>{t('contact')}</a></li>
+                <li><Link href="/about" className={styles.navLink}>{t('about')}</Link></li>
+                <li><Link href="/experience" className={styles.navLink}>{t('experience')}</Link></li>
+                <li><Link href="/projects" className={styles.navLink}>{t('projects')}</Link></li>
+                <li><Link href="/services" className={styles.navLink}>{t('services')}</Link></li>
+                <li><Link href="/contact" className={styles.contactBtn}>{t('contact')}</Link></li>
             </ul>
         </nav>
     );
