@@ -62,6 +62,14 @@ export default async function RootLayout({ children, params }) {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Ioannis Lampropoulos",
+    "image": "https://ioannislampropoulos.com/images/profile.jpg",
+    "telephone": "+306939379169",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kalamaria",
+      "addressRegion": "Thessaloniki",
+      "addressCountry": "GR"
+    },
     "url": "https://ioannislampropoulos.com",
     "areaServed": locale === 'el' ? "Greece" : "Worldwide",
     "hasOfferCatalog": {

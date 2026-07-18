@@ -24,6 +24,7 @@ export default function ContactPage() {
         "@type": "ProfessionalService",
         "name": "Ioannis Lampropoulos",
         "image": "https://ioannislampropoulos.com/images/profile.jpg",
+        "telephone": "+306939379169",
         "description": "Software Engineer based in Thessaloniki, Greece. Specialized in Custom Web Applications, E-Commerce, and Corporate Websites.",
         "address": {
             "@type": "PostalAddress",
