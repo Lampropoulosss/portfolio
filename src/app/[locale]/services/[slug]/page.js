@@ -44,7 +44,11 @@ export default async function ServicePage({ params }) {
 
             <div className={styles.section}>
                 <h2 className={styles.sectionTitle}>{tCommon('technologiesUsed')}</h2>
-                <p className={styles.text}>{t('technologiesUsed')}</p>
+                <div className={styles.tags}>
+                    {t('technologiesUsed').split(',').map((tech, index) => (
+                        <span key={index} className={styles.tag}>{tech.trim()}</span>
+                    ))}
+                </div>
             </div>
 
             <div className={styles.section}>

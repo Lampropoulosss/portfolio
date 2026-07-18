@@ -33,8 +33,18 @@ export default async function ProjectPage({ params }) {
             <h1 className={styles.title}>{t('caseStudy.title')}</h1>
             
             <div className={styles.metaInfo}>
-                <p><strong>{locale === 'el' ? 'Τεχνολογίες (Tech Stack):' : 'Tech Stack:'}</strong> {t('caseStudy.techStack')}</p>
-                <p><strong>{locale === 'el' ? 'Ρόλος:' : 'Role:'}</strong> {t('caseStudy.role')}</p>
+                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '10px', marginBottom: '15px' }}>
+                    <strong style={{ whiteSpace: 'nowrap' }}>{locale === 'el' ? 'Τεχνολογίες (Tech Stack):' : 'Tech Stack:'}</strong>
+                    <div className={styles.tags} style={{ margin: 0, gap: '8px' }}>
+                        {t('caseStudy.techStack').split(',').map((tech, index) => (
+                            <span key={index} className={styles.tag}>{tech.trim()}</span>
+                        ))}
+                    </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
+                    <strong style={{ whiteSpace: 'nowrap' }}>{locale === 'el' ? 'Ρόλος:' : 'Role:'}</strong> 
+                    <span className={styles.roleText}>{t('caseStudy.role')}</span>
+                </div>
             </div>
 
             <div className={styles.imageWrapper}>

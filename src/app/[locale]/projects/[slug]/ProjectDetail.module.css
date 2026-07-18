@@ -34,12 +34,22 @@
 }
 
 .tag {
-    background: var(--primary);
-    color: var(--background);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
     font-weight: 500;
+    display: inline-block;
+}
+
+.roleText {
+    color: var(--foreground);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.95rem;
 }
 
 .description {
@@ -94,4 +104,5 @@
 
 .link:hover {
     opacity: 0.9;
+    color: var(--background);
 }
