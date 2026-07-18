@@ -17,10 +17,11 @@ export async function generateMetadata({ params }) {
         title: t('caseStudy.title'),
         description: t('description'),
         alternates: {
-            canonical: `/${locale}/projects/${slug}`,
+            canonical: `https://ioannislampropoulos.com/${locale}/projects/${slug}`,
             languages: {
-                'en': `/en/projects/${slug}`,
-                'el': `/el/projects/${slug}`,
+                'en': `https://ioannislampropoulos.com/en/projects/${slug}`,
+                'el': `https://ioannislampropoulos.com/el/projects/${slug}`,
+                'x-default': `https://ioannislampropoulos.com/en/projects/${slug}`,
             },
         },
     };

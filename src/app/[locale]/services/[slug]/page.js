@@ -16,10 +16,11 @@ export async function generateMetadata({ params }) {
         title: t('title'),
         description: t('description'),
         alternates: {
-            canonical: `/${locale}/services/${slug}`,
+            canonical: `https://ioannislampropoulos.com/${locale}/services/${slug}`,
             languages: {
-                'en': `/en/services/${slug}`,
-                'el': `/el/services/${slug}`,
+                'en': `https://ioannislampropoulos.com/en/services/${slug}`,
+                'el': `https://ioannislampropoulos.com/el/services/${slug}`,
+                'x-default': `https://ioannislampropoulos.com/en/services/${slug}`,
             },
         },
     };

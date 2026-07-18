@@ -8,10 +8,11 @@ export async function generateMetadata({ params }) {
     return {
         title: t('title'),
         alternates: {
-            canonical: `/${locale}/projects`,
+            canonical: `https://ioannislampropoulos.com/${locale}/projects`,
             languages: {
-                'en': '/en/projects',
-                'el': '/el/projects',
+                'en': 'https://ioannislampropoulos.com/en/projects',
+                'el': 'https://ioannislampropoulos.com/el/projects',
+                'x-default': 'https://ioannislampropoulos.com/en/projects',
             },
         },
     };

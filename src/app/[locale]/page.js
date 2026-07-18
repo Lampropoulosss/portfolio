@@ -5,10 +5,11 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   return {
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `https://ioannislampropoulos.com/${locale}`,
       languages: {
-        'en': '/en',
-        'el': '/el',
+        'en': 'https://ioannislampropoulos.com/en',
+        'el': 'https://ioannislampropoulos.com/el',
+        'x-default': 'https://ioannislampropoulos.com/en',
       },
     },
   };

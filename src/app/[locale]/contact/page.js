@@ -8,10 +8,11 @@ export async function generateMetadata({ params }) {
     return {
         title: t('title'),
         alternates: {
-            canonical: `/${locale}/contact`,
+            canonical: `https://ioannislampropoulos.com/${locale}/contact`,
             languages: {
-                'en': '/en/contact',
-                'el': '/el/contact',
+                'en': 'https://ioannislampropoulos.com/en/contact',
+                'el': 'https://ioannislampropoulos.com/el/contact',
+                'x-default': 'https://ioannislampropoulos.com/en/contact',
             },
         },
     };
@@ -35,7 +36,7 @@ export default function ContactPage() {
         "url": "https://ioannislampropoulos.com",
         "sameAs": [
             "https://github.com/Lampropoulosss",
-            "https://www.linkedin.com/in/ioannis-lampropoulos-883a902a7/"
+            "https://www.linkedin.com/in/ioannislampropoulos05"
         ],
         "knowsAbout": [
             "Next.js", "React", ".NET", "Python", "Docker", "SEO", "Web Development"
