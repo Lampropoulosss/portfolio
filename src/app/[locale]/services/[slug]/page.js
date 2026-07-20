@@ -13,18 +13,21 @@ export async function generateMetadata({ params }, parent) {
     const t = await getTranslations({ locale, namespace: `Services.list.${service.translationKey}` });
     const parentMetadata = await parent;
 
+    const fullTitle = `${t('title')} | Ioannis Lampropoulos`;
+    const seoDesc = t('seoDescription');
+
     return {
-        title: t('title'),
-        description: t('description'),
+        title: { absolute: fullTitle },
+        description: seoDesc,
         openGraph: {
             ...parentMetadata.openGraph,
-            title: t('title'),
-            description: t('description'),
+            title: fullTitle,
+            description: seoDesc,
         },
         twitter: {
             ...parentMetadata.twitter,
-            title: t('title'),
-            description: t('description'),
+            title: fullTitle,
+            description: seoDesc,
         },
         alternates: {
             canonical: `https://ioannislampropoulos.com/${locale}/services/${slug}`,

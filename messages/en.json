@@ -140,7 +140,8 @@
           "role": "Full-Stack Web Developer & Maintainer",
           "challenge": "For an active commercial platform, every second the page is slow or inaccessible is a lost customer and lost sales. Robinrich.gr came to me for exactly that, a very real problem with an existing platform hobbled by technical debt, poor performance and missing essential features users actually wanted. They needed someone to come in, find deep underlying problems with a functioning site and add modern modules without destroying it.",
           "approach": "I took on production maintenance and development for the site prioritizing stability at all times. Starting by delving into legacy codebase to find and identify areas of low performance. I began with refactoring existing messy components in Next.js and React, diagnosed and fixed key legacy bugs, streamlined the data architecture using Firebase and updated the styling approach using CSS3 Modules. Once the code base was healthy, I worked directly with the stakeholders to translate their vision into functional requirements and built/deployed new custom modules.",
-          "outcome": "As a result the site’s loading times became significantly faster, delivering a much more enjoyable experience for users and increased their engagement. The new modules have had a real positive impact, and the stable foundation gives the client room to grow without worry."
+          "outcome": "As a result the site’s loading times became significantly faster, delivering a much more enjoyable experience for users and increased their engagement. The new modules have had a real positive impact, and the stable foundation gives the client room to grow without worry.",
+          "seoDescription": "Read how I revamped robinrich.gr, an active commercial platform, resolving legacy bugs and improving speed without disrupting sales."
         }
       },
       "mp3convert": {
@@ -155,7 +156,8 @@
           "role": "Lead Developer & Architect",
           "challenge": "Massive drawback to other conversion tools in market - the bottleneck: Other media conversion tools in the market make use of a server. Each file a user converts is consuming the server's resources, which does not scale well with the increase of user base, resulting in a large number of hosting expenses. So I was aiming to create an awesome product that completely cuts down the usage of the server, providing a lightning-fast service at a cheap cost.",
           "approach": "The Inverse Approach: Instead of following the standard architecture that most media conversion tools use, I went in the inverse direction.",
-          "outcome": "I offload most of the workload to the user's browser. Built a client-side rendering system with Next.js and integrated WebAssembly with FFmpeg for all the media conversions. Added a Golang backend API that manages the stream of the incoming request and routing of the data between WebAssembly and Golang efficiently for real-time stream of the conversion output."
+          "outcome": "I offload most of the workload to the user's browser. Built a client-side rendering system with Next.js and integrated WebAssembly with FFmpeg for all the media conversions. Added a Golang backend API that manages the stream of the incoming request and routing of the data between WebAssembly and Golang efficiently for real-time stream of the conversion output.",
+          "seoDescription": "Discover how I used client-side media conversion using WebAssembly and Next.js to drastically reduce server costs for mp3convert.tech."
         }
       },
       "yt2mp3": {
@@ -170,22 +172,24 @@
           "role": "Founder & Lead Developer",
           "challenge": "The web is full of clunky, slow, and untrustworthy media conversion sites. There was a clear market gap for a highly reliable, lightning-fast, and user-friendly platform that actually respected the user experience. Furthermore, to survive in this highly competitive niche, the platform needed an incredibly strong technical SEO foundation to drive organic traffic without relying on paid ads.",
           "approach": "I took full ownership of the product lifecycle,from sketching the initial UI/UX wireframes to architecting the backend and handling the final deployment. Built on a robust Next.js and Node.js stack, I prioritized a clean, responsive design that works flawlessly on mobile and desktop. Knowing that traffic is the lifeblood of a SaaS, I heavily optimized the application's load times and strictly integrated SEO best practices into the core framework so search engines could easily crawl, index, and rank the pages.",
-          "outcome": "The platform successfully attracted and retained a steady user base. Thanks to the deep performance optimizations, it secured strong search engine rankings, bringing in organic traffic effortlessly. Users received a seamless, ad-light conversion experience, proving that a focus on speed and good UI/UX directly translates to product success."
+          "outcome": "The platform successfully attracted and retained a steady user base. Thanks to the deep performance optimizations, it secured strong search engine rankings, bringing in organic traffic effortlessly. Users received a seamless, ad-light conversion experience, proving that a focus on speed and good UI/UX directly translates to product success.",
+          "seoDescription": "A case study on building yt2mp3.tech, a high-traffic media SaaS from scratch with strong SEO and lightning-fast Next.js architecture."
         }
       },
       "modularReactBlog": {
         "title": "Modular React Blog",
         "description": "A distinct exploration of component-based architecture. Built to demonstrate proficiency in React hooks, state management patterns, and dynamic routing.",
         "problem": "Traditional monolithic blogs are often hard to extend or customize dynamically without tight coupling.",
-        "stack": "React, State Management (Context/Redux), Component Architecture",
+        "stack": "React, State Management (Context), Component Architecture",
         "outcome": "Delivered a clean, modular architecture that is easily extensible, highly performant, and simple to maintain.",
         "caseStudy": {
           "title": "Modular React Blog: Architecting a Scalable, High-Performance Content Platform",
-          "techStack": "React, State Management (Context/Redux), Component Architecture",
+          "techStack": "React, State Management (Context), Component Architecture",
           "role": "Software Engineer",
           "challenge": "Standard blog templates (the monolithic style) are a real pain to add functionality or dynamically extend. Since the code is very coupled together, the moment you try to add more functionality or manage state the whole site will likely crash. My goal here was to create the most responsive, user-friendly, but ultimately, easiest blog template for developers to manage, scale and grow.",
           "approach": "I engineered this blog as a deep-dive into state of the art component-based design. It was created using React, removing bloated functionalities usually present on your average templates, focusing only on dynamic routing and solid state management patterns (with context/redux) and implementing components which are all individually, re-usable and testable.",
-          "outcome": "I delivered a state-of-the-art lightning-fast blog application built around a modular, clean component architecture which is high-performant, extensible and perfect for easy content editing. The goal from a technical point of view was to show my capability to write well-maintained, scalable code in react without it turning into a messy code-smell that you can't maintain over time as the business scales."
+          "outcome": "I delivered a state-of-the-art lightning-fast blog application built around a modular, clean component architecture which is high-performant, extensible and perfect for easy content editing. The goal from a technical point of view was to show my capability to write well-maintained, scalable code in react without it turning into a messy code-smell that you can't maintain over time as the business scales.",
+          "seoDescription": "Explore my Modular React Blog project, demonstrating state-of-the-art component architecture, dynamic routing, and state management."
         }
       },
       "chaoticDestinyHosting": {
@@ -200,7 +204,8 @@
           "role": "Front-End Developer",
           "challenge": "As a web hosting provider's website is a 24/7 online shop window, Chaotic Destiny Hosting had the major problem of an unresponsive, confusing front-end. This friction resulted in losing new clients in the checkout funnel and in turn unnecessary support tickets being submitted by current customers.",
           "approach": "Collaborating with management I took their business logic, translated it into a modern & beautiful web front-end. I threw away the clunky existing foundation, building the UI elements up with clean HTML5, CSS3, and Vanilla JS. Simultaneously, I was personally offering direct web hosting customer support, using their feedback to debug the front-end code & refine layout on both mobile & desktop devices.",
-          "outcome": "The overhaul redefined the client user-journey, providing an intuitive & speedy responsive design so clients no longer struggle navigating Chaos Destiny Hosting. As well as the drastically improved customer experience & reduced abandoned carts, navigation support tickets also plummet."
+          "outcome": "The overhaul redefined the client user-journey, providing an intuitive & speedy responsive design so clients no longer struggle navigating Chaos Destiny Hosting. As well as the drastically improved customer experience & reduced abandoned carts, navigation support tickets also plummet.",
+          "seoDescription": "Read how I redesigned the Chaotic Destiny Hosting front-end to boost conversions and deliver a seamless, responsive client user-journey."
         }
       }
     }
@@ -220,7 +225,8 @@
         "description": "Tailor-made web applications built to make your daily operations easier, faster, and more efficient.",
         "theChallenge": "Off-the-shelf software often forces businesses to change their workflows to fit the tool, leading to inefficiencies, manual data entry, and frustrating workarounds. As your business scales, these rigid systems become bottlenecks. You need software that adapts to how you work, not the other way around.",
         "technologiesUsed": ".NET Web API, React, Next.js, Node.js, Docker",
-        "outcomeValue": "I build fully customized, scalable web applications that perfectly map to your unique business logic. By automating repetitive tasks and streamlining complex workflows, these custom solutions drastically increase your team's productivity and give you a robust foundation that grows alongside your business."
+        "outcomeValue": "I build fully customized, scalable web applications that perfectly map to your unique business logic. By automating repetitive tasks and streamlining complex workflows, these custom solutions drastically increase your team's productivity and give you a robust foundation that grows alongside your business.",
+        "seoDescription": "I build fully customized, scalable web applications that perfectly map to your unique business logic and increase productivity."
       },
       "eshopDevelopment": {
         "title": "E-Commerce Development",
@@ -228,7 +234,8 @@
         "description": "Modern online stores with secure payments and fast navigation, designed to boost your sales.",
         "theChallenge": "A slow, clunky, or unsecure online store is the fastest way to lose a customer. High cart abandonment rates, confusing checkout processes, and poor mobile optimization directly translate to lost revenue. In today's competitive market, your e-shop needs to be faster and more reliable than the competition.",
         "technologiesUsed": "Next.js, Stripe/PayPal Integration, Headless CMS",
-        "outcomeValue": "I develop high-conversion, modern e-commerce platforms with lightning-fast page loads and seamless, secure checkout experiences. By focusing on technical SEO and flawless mobile responsiveness, your new e-shop will not only attract more organic traffic but actively convert those visitors into paying customers."
+        "outcomeValue": "I develop high-conversion, modern e-commerce platforms with lightning-fast page loads and seamless, secure checkout experiences. By focusing on technical SEO and flawless mobile responsiveness, your new e-shop will not only attract more organic traffic but actively convert those visitors into paying customers.",
+        "seoDescription": "I develop high-conversion, modern e-commerce platforms with lightning-fast page loads and seamless, secure checkout experiences."
       },
       "corporateWebsiteDesign": {
         "title": "Corporate Website Design",
@@ -236,7 +243,8 @@
         "description": "Professional, fast, and mobile-friendly websites that showcase your brand and attract new customers.",
         "theChallenge": "Your website is your digital storefront. A dated, slow, or generic digital presence actively harms your brand's credibility and makes potential clients second-guess trusting you. Relying on heavy, bloated templates means your site won't rank well on Google, leaving you invisible to local searchers.",
         "technologiesUsed": "React, Next.js, CSS3/Tailwind, SEO Optimization",
-        "outcomeValue": "I design and develop stunning, highly performant corporate websites that serve as a 24/7 lead generation tool. Built from the ground up for speed and search engine visibility, your site will showcase your brand's authority, build instant trust, and rank prominently on Google to attract new clients."
+        "outcomeValue": "I design and develop stunning, highly performant corporate websites that serve as a 24/7 lead generation tool. Built from the ground up for speed and search engine visibility, your site will showcase your brand's authority, build instant trust, and rank prominently on Google to attract new clients.",
+        "seoDescription": "I design and develop stunning, highly performant corporate websites that serve as a 24/7 lead generation tool and build instant trust."
       },
       "maintenanceTechnicalSupport": {
         "title": "Maintenance & Technical Support (SEO)",
@@ -244,7 +252,8 @@
         "description": "Continuous monitoring, speed optimization (SEO), security updates, and quick bug fixes to give you peace of mind.",
         "theChallenge": "Launching a website is just step one. Without ongoing maintenance, web applications degrade over time. Plugins break, code becomes vulnerable to hacks, and slow load times eventually destroy your SEO rankings. Business owners often waste hours trying to fix technical bugs instead of running their company.",
         "technologiesUsed": "Automated Testing (Python), Docker, Azure, Uptime Monitoring",
-        "outcomeValue": "I provide complete peace of mind through continuous monitoring, proactive security patching, and aggressive speed optimizations. I handle the technical heavy lifting, ensuring guaranteed uptime and peak performance so your digital assets remain secure, fast, and highly ranked on search engines."
+        "outcomeValue": "I provide complete peace of mind through continuous monitoring, proactive security patching, and aggressive speed optimizations. I handle the technical heavy lifting, ensuring guaranteed uptime and peak performance so your digital assets remain secure, fast, and highly ranked on search engines.",
+        "seoDescription": "I provide complete peace of mind through continuous monitoring, proactive security patching, and aggressive speed optimizations."
       }
     }
   },
