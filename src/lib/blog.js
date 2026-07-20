@@ -9,7 +9,6 @@ const postsDirectory = path.join(process.cwd(), 'content/blog');
 export function getPostSlugs(locale) {
     const localeDir = path.join(postsDirectory, locale);
     if (!fs.existsSync(localeDir)) {
-        fs.mkdirSync(localeDir, { recursive: true });
         return [];
     }
     return fs.readdirSync(localeDir).filter(file => file.endsWith('.md'));
