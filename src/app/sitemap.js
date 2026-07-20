@@ -1,5 +1,6 @@
 import { routing } from '@/i18n/routing';
 import { projectData, servicesData } from '@/lib/data';
+import { getPostSlugs } from '@/lib/blog';
 
 export default function sitemap() {
     const baseUrl = 'https://ioannislampropoulos.com';
@@ -10,12 +11,16 @@ export default function sitemap() {
         '/contact',
         '/experience',
         '/projects',
-        '/services'
+        '/services',
+        '/blog'
     ];
 
+    const enBlogSlugs = getPostSlugs('en').map(f => f.replace(/\.md$/, ''));
+    
     const dynamicPages = [
         ...projectData.map(p => `/projects/${p.slug}`),
-        ...servicesData.map(s => `/services/${s.slug}`)
+        ...servicesData.map(s => `/services/${s.slug}`),
+        ...enBlogSlugs.map(slug => `/blog/${slug}`)
     ];
 
     const allPages = [...staticPages, ...dynamicPages];

@@ -1,0 +1,107 @@
+.faqSection {
+    padding: 5rem 0;
+    background: var(--background);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--foreground);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    background: var(--card-bg);
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.item:hover {
+    border-color: var(--primary);
+}
+
+.question {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--foreground);
+    cursor: pointer;
+    list-style: none; /* Removes default triangle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove default details marker for WebKit/Safari */
+.question::-webkit-details-marker {
+    display: none;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.icon::before,
+.icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.icon::before {
+    top: 11px;
+    left: 4px;
+    width: 16px;
+    height: 2px;
+}
+
+.icon::after {
+    top: 4px;
+    left: 11px;
+    width: 2px;
+    height: 16px;
+}
+
+.item[open] .icon::after {
+    transform: rotate(90deg) scale(0);
+}
+
+.item[open] .icon::before {
+    background-color: var(--secondary);
+}
+
+.answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--secondary);
+    line-height: 1.6;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

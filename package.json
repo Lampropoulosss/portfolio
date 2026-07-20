@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@marsidev/react-turnstile": "^1.4.1",
+    "gray-matter": "^4.0.3",
     "next": "^16.2.10",
     "next-intl": "^4.6.1",
     "nodemailer": "^9.0.3",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
   },
   "devDependencies": {
     "eslint": "^9",

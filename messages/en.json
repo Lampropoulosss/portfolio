@@ -2,20 +2,49 @@
   "Metadata": {
     "title": "Ioannis Lampropoulos | Portfolio",
     "description": "Portfolio of Ioannis Lampropoulos, Software Engineer.",
-    "keywords": "Software Engineer, Web Developer, React, Next.js, .NET, Ioannis Lampropoulos, Portfolio"
+    "keywords": "Software Engineer, Web Developer, React, Next.js, .NET, Ioannis Lampropoulos, Portfolio",
+    "home": {
+      "title": "Freelance Software Engineer & Web Developer | Ioannis Lampropoulos",
+      "description": "Hire Ioannis Lampropoulos, a freelance software engineer and web developer offering custom web application development and e-commerce solutions worldwide."
+    },
+    "about": {
+      "title": "About Ioannis | Freelance Next.js & React Developer",
+      "description": "Learn about Ioannis Lampropoulos, a passionate software engineer and web developer specializing in Next.js, React, and .NET."
+    },
+    "contact": {
+      "title": "Contact | Hire a Freelance Web Developer",
+      "description": "Get in touch with Ioannis Lampropoulos for custom web development, e-commerce, or freelance software engineering services."
+    },
+    "experience": {
+      "title": "Experience | Software Engineer Portfolio",
+      "description": "Explore the professional experience of Ioannis Lampropoulos in full-stack web development and freelance engineering."
+    },
+    "projects": {
+      "title": "Projects | Custom Web Application Development",
+      "description": "View featured projects by Ioannis Lampropoulos, showcasing expertise in React, Next.js, and high-performance web applications."
+    },
+    "services": {
+      "title": "Services | E-Commerce & Corporate Website Developer",
+      "description": "Professional web development services including custom web apps, e-commerce stores, and corporate websites by Ioannis Lampropoulos."
+    },
+    "blog": {
+      "title": "Blog | Ioannis Lampropoulos",
+      "description": "Read the latest articles about web development, technical SEO, and modern digital solutions."
+    }
   },
   "Navbar": {
     "about": "About",
     "experience": "Experience",
     "services": "Services",
     "projects": "Projects",
+    "blog": "Blog",
     "contact": "Contact Me"
   },
   "Hero": {
     "greeting": "Hi, I'm",
     "firstName": "Ioannis",
     "lastName": "Lampropoulos",
-    "title": "Software Engineer",
+    "title": "Freelance Software Engineer & Web Developer",
     "description": "Transforming ideas into polished software. A Software Engineer dedicated to building accessible, high-performance web applications.\nBased in Thessaloniki, Greece.",
     "checkWork": "Check my work",
     "contactMe": "Contact me"
@@ -238,6 +267,23 @@
       "successMessage": "Thank you! Your message has been received.",
       "errorMessage": "Something went wrong. Please try again later."
     }
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Insights, tutorials, and articles on modern web development.",
+    "readMore": "Read Article",
+    "noPosts": "No blog posts are available yet. Check back soon!"
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "q1": "Do you work with international clients?",
+    "a1": "Yes, I work with clients worldwide. As a freelance web developer, I communicate effectively across different time zones and deliver projects globally.",
+    "q2": "How much does a website cost?",
+    "a2": "The cost depends on the scope and complexity of the project. A standard corporate website typically starts at €400, while custom web applications or e-commerce platforms begin around €1,000-€1,500.",
+    "q3": "How long does a project take?",
+    "a3": "A standard website usually takes 1 to 3 weeks to complete. More complex custom web applications or e-commerce stores can take up to 2 months, depending on features.",
+    "q4": "Do you offer ongoing maintenance?",
+    "a4": "Absolutely. I offer monthly retainers for ongoing maintenance, security updates, and technical SEO optimizations to keep your website fast and secure."
   },
   "Footer": {
     "rights": "© {year} Ioannis Lampropoulos. All rights reserved.",

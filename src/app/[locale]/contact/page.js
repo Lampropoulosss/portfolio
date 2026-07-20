@@ -1,12 +1,24 @@
 import ContactComponent from '@/components/Contact';
 import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }, parent) {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Contact' });
+    const t = await getTranslations({ locale, namespace: 'Metadata.contact' });
+    const parentMetadata = await parent;
 
     return {
         title: t('title'),
+        description: t('description'),
+        openGraph: {
+            ...parentMetadata.openGraph,
+            title: t('title'),
+            description: t('description'),
+        },
+        twitter: {
+            ...parentMetadata.twitter,
+            title: t('title'),
+            description: t('description'),
+        },
         alternates: {
             canonical: `https://ioannislampropoulos.com/${locale}/contact`,
             languages: {
@@ -19,36 +31,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default function ContactPage() {
-    // Add Structured Data for Local SEO (ProfessionalService)
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Ioannis Lampropoulos",
-        "image": "https://ioannislampropoulos.com/images/profile.jpg",
-        "telephone": "+306939379169",
-        "description": "Software Engineer based in Thessaloniki, Greece. Specialized in Custom Web Applications, E-Commerce, and Corporate Websites.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kalamaria",
-            "addressRegion": "Thessaloniki",
-            "addressCountry": "GR"
-        },
-        "url": "https://ioannislampropoulos.com",
-        "sameAs": [
-            "https://github.com/Lampropoulosss",
-            "https://www.linkedin.com/in/ioannislampropoulos05"
-        ],
-        "knowsAbout": [
-            "Next.js", "React", ".NET", "Python", "Docker", "SEO", "Web Development"
-        ]
-    };
-
+    // Removed duplicate Structured Data for Local SEO (ProfessionalService) as it is now in layout.js
     return (
         <main>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
             <ContactComponent />
         </main>
     );

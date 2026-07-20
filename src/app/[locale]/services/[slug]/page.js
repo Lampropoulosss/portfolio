@@ -4,17 +4,28 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import styles from './ServiceDetail.module.css';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }, parent) {
     const { locale, slug } = await params;
     const service = servicesData.find((s) => s.slug === slug);
     
     if (!service) return {};
 
     const t = await getTranslations({ locale, namespace: `Services.list.${service.translationKey}` });
+    const parentMetadata = await parent;
 
     return {
         title: t('title'),
         description: t('description'),
+        openGraph: {
+            ...parentMetadata.openGraph,
+            title: t('title'),
+            description: t('description'),
+        },
+        twitter: {
+            ...parentMetadata.twitter,
+            title: t('title'),
+            description: t('description'),
+        },
         alternates: {
             canonical: `https://ioannislampropoulos.com/${locale}/services/${slug}`,
             languages: {
@@ -38,8 +49,36 @@ export default async function ServicePage({ params }) {
     const tCommon = await getTranslations({ locale, namespace: 'Services' });
     const tHero = await getTranslations({ locale, namespace: 'Hero' });
 
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": locale === 'el' ? "Αρχική" : "Home",
+                "item": `https://ioannislampropoulos.com/${locale}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": locale === 'el' ? "Υπηρεσίες" : "Services",
+                "item": `https://ioannislampropoulos.com/${locale}/services`
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": t('title')
+            }
+        ]
+    };
+
     return (
         <main className={styles.container}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <h1 className={styles.title}>{t('title')}</h1>
             <p className={styles.description}>{t('description')}</p>
             

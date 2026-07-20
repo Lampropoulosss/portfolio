@@ -19,7 +19,7 @@ export default function Projects({ limit }) {
                             <div className={styles.imageWrapper}>
                                 <Image
                                     src={project.image}
-                                    alt={t(`list.${project.translationKey}.title`)}
+                                    alt={`${t(`list.${project.translationKey}.title`)} - Web Development Project by Ioannis Lampropoulos`}
                                     width={400}
                                     height={250}
                                     className={styles.projectImage}

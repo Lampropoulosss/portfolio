@@ -5,17 +5,28 @@ import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import styles from './ProjectDetail.module.css';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }, parent) {
     const { locale, slug } = await params;
     const project = projectData.find((p) => p.slug === slug);
     
     if (!project) return {};
 
     const t = await getTranslations({ locale, namespace: `Projects.list.${project.translationKey}` });
+    const parentMetadata = await parent;
 
     return {
         title: t('caseStudy.title'),
         description: t('description'),
+        openGraph: {
+            ...parentMetadata.openGraph,
+            title: t('caseStudy.title'),
+            description: t('description'),
+        },
+        twitter: {
+            ...parentMetadata.twitter,
+            title: t('caseStudy.title'),
+            description: t('description'),
+        },
         alternates: {
             canonical: `https://ioannislampropoulos.com/${locale}/projects/${slug}`,
             languages: {
@@ -38,8 +49,36 @@ export default async function ProjectPage({ params }) {
     const t = await getTranslations({ locale, namespace: `Projects.list.${project.translationKey}` });
     const tHero = await getTranslations({ locale, namespace: 'Hero' });
 
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": locale === 'el' ? "Αρχική" : "Home",
+                "item": `https://ioannislampropoulos.com/${locale}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": locale === 'el' ? "Έργα" : "Projects",
+                "item": `https://ioannislampropoulos.com/${locale}/projects`
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": t('caseStudy.title')
+            }
+        ]
+    };
+
     return (
         <main className={styles.container}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <h1 className={styles.title}>{t('caseStudy.title')}</h1>
             
             <div className={styles.metaInfo}>
@@ -60,7 +99,7 @@ export default async function ProjectPage({ params }) {
             <div className={styles.imageWrapper}>
                 <Image
                     src={project.image}
-                    alt={t('title')}
+                    alt={`${t('title')} - Web Development Case Study by Ioannis Lampropoulos`}
                     width={900}
                     height={500}
                     className={styles.projectImage}

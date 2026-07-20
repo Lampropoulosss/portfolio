@@ -31,6 +31,7 @@ export default function Navbar() {
                         <li><Link href="/experience" className={styles.navLink}>{t('experience')}</Link></li>
                         <li><Link href="/projects" className={styles.navLink}>{t('projects')}</Link></li>
                         <li><Link href="/services" className={styles.navLink}>{t('services')}</Link></li>
+                        <li><Link href="/blog" className={styles.navLink}>{t('blog')}</Link></li>
                     </ul>
 
                     <div className={styles.actions}>
@@ -59,6 +60,7 @@ export default function Navbar() {
                     <li><Link href="/experience" className={styles.mobileNavLink} onClick={closeMenu}>{t('experience')}</Link></li>
                     <li><Link href="/projects" className={styles.mobileNavLink} onClick={closeMenu}>{t('projects')}</Link></li>
                     <li><Link href="/services" className={styles.mobileNavLink} onClick={closeMenu}>{t('services')}</Link></li>
+                    <li><Link href="/blog" className={styles.mobileNavLink} onClick={closeMenu}>{t('blog')}</Link></li>
                     <li>
                         <Link href={pathname} locale={nextLocale} className={styles.mobileLangToggle} onClick={closeMenu}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

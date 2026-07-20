@@ -1,12 +1,24 @@
 import ProjectsComponent from '@/components/Projects';
 import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }, parent) {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Projects' });
+    const t = await getTranslations({ locale, namespace: 'Metadata.projects' });
+    const parentMetadata = await parent;
 
     return {
         title: t('title'),
+        description: t('description'),
+        openGraph: {
+            ...parentMetadata.openGraph,
+            title: t('title'),
+            description: t('description'),
+        },
+        twitter: {
+            ...parentMetadata.twitter,
+            title: t('title'),
+            description: t('description'),
+        },
         alternates: {
             canonical: `https://ioannislampropoulos.com/${locale}/projects`,
             languages: {

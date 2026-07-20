@@ -40,11 +40,20 @@ export async function generateMetadata({ params }) {
       siteName: 'Ioannis Lampropoulos',
       locale: locale,
       type: 'website',
+      images: [
+        {
+          url: 'https://ioannislampropoulos.com/images/profile_picture.jpg',
+          width: 800,
+          height: 600,
+          alt: 'Ioannis Lampropoulos',
+        }
+      ]
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
+      images: ['https://ioannislampropoulos.com/images/profile_picture.jpg'],
     },
   };
 }
@@ -64,6 +73,12 @@ export default async function RootLayout({ children, params }) {
     "name": "Ioannis Lampropoulos",
     "image": "https://ioannislampropoulos.com/images/profile.jpg",
     "telephone": "+306939379169",
+    "description": "Freelance Software Engineer and Web Developer based in Thessaloniki, Greece. Specialized in Custom Web Applications, E-Commerce, and Corporate Websites.",
+    "priceRange": "€400 - €1500+",
+    "sameAs": [
+        "https://github.com/Lampropoulosss",
+        "https://www.linkedin.com/in/ioannislampropoulos05"
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kalamaria",

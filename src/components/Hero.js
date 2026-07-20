@@ -30,7 +30,7 @@ export default function Hero() {
                     <div className={styles.imageWrapper}>
                         <Image
                             src="/images/profile_picture.jpg"
-                            alt="Ioannis Lampropoulos"
+                            alt="Ioannis Lampropoulos - Freelance Web Developer and Software Engineer in Thessaloniki"
                             width={400}
                             height={400}
                             className={styles.profileImg}
