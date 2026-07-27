@@ -1,5 +1,13 @@
 export const projectData = [
     {
+        id: "taskcart",
+        slug: "taskcart",
+        tags: ["SvelteKit", "TypeScript", "Tailwind CSS v4", "Docker", "SaaS"],
+        image: "/images/project_taskcart.png",
+        link: "https://taskcart.io",
+        translationKey: "taskcart"
+    },
+    {
         id: "robinrich",
         slug: "robinrich",
         tags: ["Next.js", "Firebase", "CSS3", "Maintenance"],

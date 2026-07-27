@@ -116,7 +116,7 @@ export default async function ProjectPage({ params }) {
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>{locale === 'el' ? 'Η Προσέγγιση & Τεχνική Υλοποίηση' : 'My Approach & Technical Execution'}</h2>
+                <h2 className={styles.sectionTitle}>{locale === 'el' ? 'Η Προσέγγιση & Τεχνική Υλοποίηση' : 'Approach & Technical Execution'}</h2>
                 <p className={styles.text}>{t('caseStudy.approach')}</p>
             </div>
 

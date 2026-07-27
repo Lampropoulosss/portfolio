@@ -207,6 +207,22 @@
           "outcome": "The overhaul redefined the client user-journey, providing an intuitive & speedy responsive design so clients no longer struggle navigating Chaos Destiny Hosting. As well as the drastically improved customer experience & reduced abandoned carts, navigation support tickets also plummet.",
           "seoDescription": "Read how I redesigned the Chaotic Destiny Hosting front-end to boost conversions and deliver a seamless, responsive client user-journey."
         }
+      },
+      "taskcart": {
+        "title": "TaskCart.io",
+        "description": "A freelance business management platform that consolidates projects, invoicing, and client communication into one place, replacing the typical patchwork of spreadsheets and disconnected apps.",
+        "problem": "Freelancers juggle scattered tools, a to-do app here, an invoicing app there, cloud storage somewhere else, leading to missed payments, lost files, and hours wasted digging through email.",
+        "stack": "SvelteKit (Svelte 5), TypeScript, Tailwind CSS v4, PostgreSQL, Drizzle ORM, Better Auth, BullMQ, Redis, AWS S3, Paddle, Stripe",
+        "outcome": "Delivered an agency-grade business platform for solo freelancers, with a central hub for projects, invoices, and client communication, automated payment tracking, and a client portal.",
+        "caseStudy": {
+          "title": "TaskCart.io: Building an All-in-One Business Platform for Freelancers",
+          "techStack": "SvelteKit, Svelte 5, TypeScript, Tailwind CSS v4, PostgreSQL, Drizzle ORM, Better Auth, BullMQ & Redis, AWS S3, Paddle & Stripe",
+          "role": "Co-Founder & Full-Stack Developer",
+          "challenge": "Freelancers are almost never fired for producing bad work; they're fired for bad admin. A designer can't tell a client which version of a project they want updated. A developer forgot to send the invoice for the project they finished yesterday. A consultant has to search back through their emails for two hours to figure out where they stand on a particular task for a client.\n\nThere's tools for this out there, but the good ones are either too expensive and complicated for one solo professional, or a disorganized collection of a to-do app, an invoicing app, and cloud storage. Me and my colleague needed a tool that put together project management, client communication, and getting paid, without simply becoming the same bloated mess we've been trying to get away from for years.",
+          "approach": "We've built TaskCart with SvelteKit, Svelte 5, and TypeScript for a fast, reactive frontend, styled with Tailwind CSS v4 and Lucide icons, powered by a combination of TipTap for text fields and a PostgreSQL backend using Drizzle ORM. For the backend, Better Auth takes care of login, OAuth, and sessions, as well as verification via email, backed by Redis and BullMQ for background jobs, from sending emails, syncing Stripe invoices, and generating reports. All file uploads pass through Amazon S3 with presigned URLs so we can minimize load on the backend.\n\nFor getting paid, we chose Paddle as our billing processor, integrated with Stripe, so that freelancers could have clear insight into outstanding payments. For project and task management, we've built a drag-and-drop board view, a Gantt timeline, time tracking and several other really important features. All these components are packaged with Nginx into Docker containers for local development and production.",
+          "outcome": "The end result is a tool giving freelancers across any discipline, from designers, writers, and developers, to social media managers and consultants, the agency-grade system to run their business without the agency overhead. Projects, client requests, and invoices live in a central hub, payments and follow-up take care of themselves with a clean central view to get paid, and clients enjoy an intuitive portal instead of another thread of email to lose track of.",
+          "seoDescription": "How we built TaskCart.io, a SvelteKit and TypeScript SaaS platform that helps freelancers manage projects, invoicing, and clients in one place."
+        }
       }
     }
   },
